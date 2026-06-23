@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
   // STATE & INITIAL CONFIG
   // ==========================================
+  initMobileControls();
   initHeaderScroll();
   initTheme();
   initRtl();
@@ -10,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initZipChecker();
   initFormSubmissions();
   initProductFilterAndModal();
+  initBackToTop();
 });
 
 // ==========================================
@@ -411,4 +413,80 @@ function initProductFilterAndModal() {
       closeModal();
     }
   });
+}
+
+// ==========================================
+// 8. BACK TO TOP BUTTON
+// ==========================================
+function initBackToTop() {
+  const backToTopBtn = document.createElement('button');
+  backToTopBtn.className = 'back-to-top';
+  backToTopBtn.setAttribute('aria-label', 'Back to top');
+  backToTopBtn.setAttribute('type', 'button');
+  
+  backToTopBtn.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  `;
+  
+  document.body.appendChild(backToTopBtn);
+  
+  const toggleBackToTop = () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('show');
+    } else {
+      backToTopBtn.classList.remove('show');
+    }
+  };
+  
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
+  window.addEventListener('scroll', toggleBackToTop);
+  toggleBackToTop();
+}
+
+// ==========================================
+// 9. DYNAMIC MOBILE MENU CONTROLS (Theme & RTL Toggle in Side Menu)
+// ==========================================
+function initMobileControls() {
+  const mobileNav = document.querySelector('.mobile-nav');
+  if (!mobileNav) return;
+  
+  // Find desktop controls
+  const desktopControls = document.querySelector('.nav-controls');
+  if (!desktopControls) return;
+  
+  // Create mobile controls wrapper
+  const mobileControls = document.createElement('div');
+  mobileControls.className = 'mobile-nav-controls';
+  
+  // Clone desktop buttons
+  const themeToggle = desktopControls.querySelector('.theme-toggle');
+  const dirToggle = desktopControls.querySelector('.direction-toggle');
+  
+  if (themeToggle) {
+    const mobileThemeToggle = themeToggle.cloneNode(true);
+    // Remove desktop class to styling scope
+    mobileThemeToggle.classList.add('mobile-theme-toggle');
+    mobileControls.appendChild(mobileThemeToggle);
+  }
+  
+  if (dirToggle) {
+    const mobileDirToggle = dirToggle.cloneNode(true);
+    mobileControls.appendChild(mobileDirToggle);
+  }
+  
+  // Append after links (before CTA block)
+  const cta = mobileNav.querySelector('.mobile-nav-cta');
+  if (cta) {
+    mobileNav.insertBefore(mobileControls, cta);
+  } else {
+    mobileNav.appendChild(mobileControls);
+  }
 }
