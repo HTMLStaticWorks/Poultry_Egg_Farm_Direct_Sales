@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background: Rounded rectangle with smooth corners -->
+  <rect width="32" height="32" rx="8" fill="#204D2E" />
+  
+  <!-- Yolk: Bright gold/orange circle at bottom right -->
+  <circle cx="21" cy="21" r="6" fill="#F79B12" />
+  
+  <!-- Feather: Elegant white/cream curved shape sweeping from bottom left to top right -->
+  <path d="M7,25 C7,25 9,17 14,12 C16.5,9.5 20,7 23,7 C23,7 21.5,11 18,14 C13,18 7,25 7,25 Z" fill="#F8F6F0" />
+  
+  <!-- Feather stem line detail -->
+  <path d="M7,25 L17,15" stroke="#204D2E" stroke-width="1.2" stroke-linecap="round" />
+</svg>
