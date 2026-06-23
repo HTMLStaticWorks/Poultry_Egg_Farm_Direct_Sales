@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Farm Products | Fresh Eggs & Pasture Poultry | Feather & Yolk</title>
+  <meta name="description" content="Browse our farm fresh selection including free-range brown eggs, certified organic eggs, whole chickens, premium processed cuts, and seasonal specialties.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MOBILE SLIDE-IN MENU -->
+  <div class="mobile-overlay"></div>
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span>Feather & Yolk</span>
+      </a>
+      <button class="mobile-nav-close btn-icon" aria-label="Close Mobile Menu">✕</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="home2.html" class="mobile-nav-link">Wholesale (Home 2)</a></li>
+      <li><a href="products.html" class="mobile-nav-link active">Products</a></li>
+      <li><a href="tours.html" class="mobile-nav-link">Farm Tours</a></li>
+      <li><a href="bulk.html" class="mobile-nav-link">Bulk Orders</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Our Farm</a></li>
+      <li><a href="quality.html" class="mobile-nav-link">Freshness & Quality</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-cta">
+      <h5>Order Fresh Eggs Today</h5>
+      <p style="font-size: 0.85rem; margin-bottom: 1rem;">Direct delivery to your doorstep within 24 hours.</p>
+      <a href="products.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Shop Products</a>
+    </div>
+  </nav>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        <span>Feather & Yolk</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="products.html" class="nav-link active">Products</a></li>
+        <li><a href="tours.html" class="nav-link">Farm Tours</a></li>
+        <li><a href="bulk.html" class="nav-link">Bulk Orders</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="quality.html" class="nav-link">Quality</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" aria-label="Toggle Theme"></button>
+        <div class="direction-toggle" aria-label="Toggle Layout Direction">
+          <button type="button" class="dir-btn ltr-btn active" data-dir="ltr">LTR</button>
+          <button type="button" class="dir-btn rtl-btn" data-dir="rtl">RTL</button>
+          <span class="dir-slider"></span>
+        </div>
+        <button class="hamburger" aria-label="Open Mobile Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PRODUCTS INTRO -->
+    <section class="section" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <div class="badge" style="align-self: center;"><span>🛒 Fresh Harvest Catalog</span></div>
+          <h2>Straight From Our Pastures</h2>
+          <p>Order direct from our local farm. Choose from free-range eggs, premium whole poultry, fresh cuts, and seasonal specialties.</p>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="category-filters">
+          <button class="filter-btn active" data-filter="all">All Products</button>
+          <button class="filter-btn" data-filter="eggs">Fresh Eggs</button>
+          <button class="filter-btn" data-filter="organic">Organic Eggs</button>
+          <button class="filter-btn" data-filter="whole-poultry">Whole Chicken</button>
+          <button class="filter-btn" data-filter="processed">Processed Poultry</button>
+          <button class="filter-btn" data-filter="specialty">Specialty Products</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS GRID -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="grid-3" id="products-catalog-grid">
+          
+          <!-- Product Card 1: Fresh Eggs -->
+          <div class="product-card" data-category="eggs" data-category-label="Fresh Eggs" data-title="Pasture-Raised Brown Eggs" data-price="$6.50 / Dozen" data-status="In Stock" data-desc="Nutrient-dense brown eggs with deep orange yolks. Laid daily by our free-roaming hens, fed a strictly vegetarian natural diet." data-origin="Coop A - East Pasture" data-weight="750g per carton" data-shelf-life="Keep refrigerated, best within 30 days">
+            <div class="product-img-wrapper">
+              <span class="product-tag">Fresh Daily</span>
+              <img src="assets/eggs_basket.png" alt="Carton of fresh pasture-raised eggs">
+            </div>
+            <div class="product-info">
+              <h4 class="product-title-text">Pasture-Raised Brown Eggs</h4>
+              <p class="product-desc">Nutrient-dense brown eggs with deep orange yolks. Laid daily by our free-roaming flocks.</p>
+              <div class="product-footer">
+                <span class="product-price">$6.50 <span style="font-size: 0.8rem; font-weight: 500;">/ Dozen</span></span>
+                <button class="btn btn-secondary view-details-btn">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2: Organic Eggs -->
+          <div class="product-card" data-category="organic" data-category-label="Organic Eggs" data-title="Certified Organic Large Eggs" data-price="$7.50 / Dozen" data-status="In Stock" data-desc="USDA certified organic farm eggs. Laid by hens fed organic grass, flowers, insects, and grains. Free from pesticides and herbicides." data-origin="Coop B - Organic Meadows" data-weight="720g per carton" data-shelf-life="Keep refrigerated, best within 30 days">
+            <div class="product-img-wrapper">
+              <span class="product-tag">USDA Organic</span>
+              <img src="assets/organic_eggs.png" alt="USDA organic eggs in carton">
+            </div>
+            <div class="product-info">
+              <h4>Certified Organic Large Eggs</h4>
+              <p class="product-desc">USDA certified organic farm eggs. Laid by hens fed organic pasture grass and GMO-free grains.</p>
+              <div class="product-footer">
+                <span class="product-price">$7.50 <span style="font-size: 0.8rem; font-weight: 500;">/ Dozen</span></span>
+                <button class="btn btn-secondary view-details-btn">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3: Whole Chicken -->
+          <div class="product-card" data-category="whole-poultry" data-category-label="Whole Chicken" data-title="Free-Range Whole Chicken" data-price="$5.99 / lb" data-status="In Stock" data-desc="Tender and lean pasture-raised chicken. Raised completely cage-free on rotating fields. Never injected with water or artificial plumpers." data-origin="North Pasture Flocks" data-weight="4.5 lbs average" data-shelf-life="Cook within 3 days or freeze up to 6 months">
+            <div class="product-img-wrapper">
+              <span class="product-tag">Whole Meat</span>
+              <img src="assets/fresh_poultry.png" alt="Whole raw free-range chicken">
+            </div>
+            <div class="product-info">
+              <h4>Free-Range Whole Chicken</h4>
+              <p class="product-desc">Tender and lean pasture-raised chicken. Raised cage-free on rotating lush green fields.</p>
+              <div class="product-footer">
+                <span class="product-price">$5.99 <span style="font-size: 0.8rem; font-weight: 500;">/ lb</span></span>
+                <button class="btn btn-secondary view-details-btn">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4: Processed Poultry -->
+          <div class="product-card" data-category="processed" data-category-label="Processed Poultry" data-title="Organic Chicken Breasts" data-price="$8.99 / lb" data-status="In Stock" data-desc="Boneless, skinless breasts packed in biodegradable trays. Exceptionally clean cuts prepared by our certified butcher team." data-origin="Processing Room C" data-weight="1.2 lbs avg weight" data-shelf-life="Cook within 2 days or freeze immediately">
+            <div class="product-img-wrapper">
+              <span class="product-tag">Premium Cuts</span>
+              <img src="assets/chicken_breasts.png" alt="Raw chicken breast slices">
+            </div>
+            <div class="product-info">
+              <h4>Organic Chicken Breasts</h4>
+              <p class="product-desc">Boneless, skinless breasts. Exceptionally clean cuts prepared daily by our expert butchers.</p>
+              <div class="product-footer">
+                <span class="product-price">$8.99 <span style="font-size: 0.8rem; font-weight: 500;">/ lb</span></span>
+                <button class="btn btn-secondary view-details-btn">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 5: Processed Poultry -->
+          <div class="product-card" data-category="processed" data-category-label="Processed Poultry" data-title="Free-Range Chicken Wings" data-price="$6.49 / lb" data-status="In Stock" data-desc="Plump and meaty poultry wings, perfect for baking or frying. Air-chilled to maintain texture and lock in natural juices." data-origin="Processing Room C" data-weight="2.0 lbs per pack" data-shelf-life="Cook within 3 days or freeze immediately">
+            <div class="product-img-wrapper">
+              <span class="product-tag">Party Pack</span>
+              <img src="assets/chicken_wings.png" alt="Raw chicken wings">
+            </div>
+            <div class="product-info">
+              <h4>Free-Range Chicken Wings</h4>
+              <p class="product-desc">Plump and meaty poultry wings. Air-chilled to maintain texture and lock in natural flavor juices.</p>
+              <div class="product-footer">
+                <span class="product-price">$6.49 <span style="font-size: 0.8rem; font-weight: 500;">/ lb</span></span>
+                <button class="btn btn-secondary view-details-btn">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 6: Specialty -->
+          <div class="product-card" data-category="specialty" data-category-label="Specialty Products" data-title="Raw Wildflower Farm Honey" data-price="$12.00 / Jar" data-status="Limited Stock" data-desc="Unfiltered, unpasteurized honey gathered from hives situated near our organic clover pastures. Loaded with local floral pollens." data-origin="North Pasture Apiary" data-weight="500g jar" data-shelf-life="Indefinite, does not spoil">
+            <div class="product-img-wrapper">
+              <span class="product-tag">Seasonal</span>
+              <img src="assets/farm_honey.png" alt="Raw farm honey jar">
+            </div>
+            <div class="product-info">
+              <h4>Raw Wildflower Farm Honey</h4>
+              <p class="product-desc">Unfiltered, unpasteurized honey gathered from hives situated near our organic clover fields.</p>
+              <div class="product-footer">
+                <span class="product-price">$12.00 <span style="font-size: 0.8rem; font-weight: 500;">/ Jar</span></span>
+                <button class="btn btn-secondary view-details-btn">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 7: Specialty -->
+          <div class="product-card" data-category="specialty" data-category-label="Specialty Products" data-title="Pasture-Raised Duck Eggs" data-price="$9.00 / Dozen" data-status="Limited Stock" data-desc="Extra large duck eggs with rich yolk. Higher fat content makes them the ultimate choice for bakers and gourmet pastry chefs." data-origin="Coop D - Pond Pastures" data-weight="900g per carton" data-shelf-life="Keep refrigerated, best within 35 days">
+            <div class="product-img-wrapper">
+              <span class="product-tag">Gourmet Select</span>
+              <img src="assets/duck_eggs.png" alt="Free range duck eggs">
+            </div>
+            <div class="product-info">
+              <h4>Pasture-Raised Duck Eggs</h4>
+              <p class="product-desc">Extra large duck eggs with rich yolk. Highly prized by home bakers and gourmet pastry chefs.</p>
+              <div class="product-footer">
+                <span class="product-price">$9.00 <span style="font-size: 0.8rem; font-weight: 500;">/ Dozen</span></span>
+                <button class="btn btn-secondary view-details-btn">View Details</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PRODUCT SPEC DETAIL MODAL (SHARED ACCROSS PAGES) -->
+  <div class="modal" id="product-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Close Modal">✕</button>
+      <div class="modal-image">
+        <img src="assets/eggs_basket.png" alt="Product Image">
+      </div>
+      <div class="modal-content">
+        <div class="modal-header-meta">
+          <span class="modal-category">Fresh Eggs</span>
+          <span class="modal-status">In Stock</span>
+        </div>
+        <h3 class="modal-title">Pasture-Raised Eggs</h3>
+        <span class="modal-price">$6.50 / Dozen</span>
+        <p class="modal-desc">Rich yolk, sturdy shells, and incredible flavor. Our signature brown eggs are laid daily by hens with full pasture access.</p>
+        
+        <div class="modal-specs">
+          <div class="spec-item">
+            <strong>Origin Point:</strong>
+            <span class="spec-origin">Coop A - East Pasture</span>
+          </div>
+          <div class="spec-item">
+            <strong>Weight Class:</strong>
+            <span class="spec-weight">Approx. 750g per carton</span>
+          </div>
+          <div class="spec-item">
+            <strong>Storage Info:</strong>
+            <span class="spec-shelflife">Keep refrigerated, best within 30 days</span>
+          </div>
+          <div class="spec-item">
+            <strong>Certifications:</strong>
+            <span>Certified Humane, GMO-Free</span>
+          </div>
+        </div>
+        
+        <div style="margin-top: auto; display: flex; gap: 1rem;">
+          <a href="contact.html" class="btn btn-primary" style="flex-grow: 1;">Enquire for Purchase</a>
+          <a href="bulk.html" class="btn btn-secondary">Bulk Inquiries</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Feather & Yolk Farm</h3>
+          <p>Bringing nature's finest pasture eggs and sustainable poultry from our fields directly to your table. Healthy, ethical, and delicious.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Farm Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Wholesale Hub</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="tours.html">Book a Tour</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="quality.html">Quality Standards</a></li>
+            <li><a href="contact.html">Support & FAQ</a></li>
+            <li><a href="bulk.html">Partnership Program</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h4>Contact the Coop</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+1 (555) 374-3447 (EGG-EGGS)</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>fresh@featherandyolkfarm.local</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>4200 Pasture Lane, Farmville, FV 84321</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Feather & Yolk Farm. All Rights Reserved. Coops Certified Organic.</span>
+        <span>Designed with 💚 for Sustainable Agriculture</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

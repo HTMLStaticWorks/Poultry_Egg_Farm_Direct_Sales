@@ -1,1 +1,391 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feather & Yolk Farm | Fresh Eggs & Pasture Poultry Direct Sales</title>
+  <meta name="description" content="Welcome to Feather & Yolk Farm. We deliver fresh organic eggs and free-range pasture poultry directly from our farm to your family and commercial kitchen.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- MOBILE SLIDE-IN MENU -->
+  <div class="mobile-overlay"></div>
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="logo">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span>Feather & Yolk</span>
+      </a>
+      <button class="mobile-nav-close btn-icon" aria-label="Close Mobile Menu">✕</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+      <li><a href="home2.html" class="mobile-nav-link">Wholesale (Home 2)</a></li>
+      <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+      <li><a href="tours.html" class="mobile-nav-link">Farm Tours</a></li>
+      <li><a href="bulk.html" class="mobile-nav-link">Bulk Orders</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Our Farm</a></li>
+      <li><a href="quality.html" class="mobile-nav-link">Freshness & Quality</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-cta">
+      <h5>Order Fresh Eggs Today</h5>
+      <p style="font-size: 0.85rem; margin-bottom: 1rem;">Direct delivery to your doorstep within 24 hours.</p>
+      <a href="products.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Shop Products</a>
+    </div>
+  </nav>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <!-- Rooster/Egg Minimal Logo SVG -->
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+          <circle cx="12" cy="12" r="3"/>
+        </svg>
+        <span>Feather & Yolk</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="tours.html" class="nav-link">Farm Tours</a></li>
+        <li><a href="bulk.html" class="nav-link">Bulk Orders</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="quality.html" class="nav-link">Quality</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" aria-label="Toggle Theme"></button>
+        <div class="direction-toggle" aria-label="Toggle Layout Direction">
+          <button type="button" class="dir-btn ltr-btn active" data-dir="ltr">LTR</button>
+          <button type="button" class="dir-btn rtl-btn" data-dir="rtl">RTL</button>
+          <span class="dir-slider"></span>
+        </div>
+        <button class="hamburger" aria-label="Open Mobile Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero-section">
+      <div class="container grid-2">
+        <div class="hero-content">
+          <div class="badge">
+            <span>🌿 100% Certified Free-Range</span>
+          </div>
+          <h1 class="hero-title">Fresh, Natural <span>Farm Eggs</span> & Poultry Direct to You</h1>
+          <p class="hero-subtitle">Taste the difference of true pasture-raised quality. Grown with sustainable practices, loved by local families, and trusted by top chefs.</p>
+          <div class="hero-actions">
+            <a href="products.html" class="btn btn-primary" id="cta-shop-products">Shop Fresh Products</a>
+            <a href="about.html" class="btn btn-secondary">Our Farming Philosophy</a>
+          </div>
+        </div>
+        <div class="hero-image-container">
+          <div class="hero-image-backdrop"></div>
+          <img src="assets/farm_hero.png" alt="Happy free range chickens grazing on lush green pasture grass at Feather and Yolk Farm" class="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- FARM-FRESH PROMISE -->
+    <section class="section section-bg" id="promise-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Farm-Fresh Promise</h2>
+          <p>We believe in wholesome, transparent agriculture. Here is what makes our eggs and poultry exceptional.</p>
+        </div>
+        <div class="grid-3">
+          <div class="promise-card">
+            <img src="assets/gathered_daily.png" alt="Eggs gathered daily in a basket" class="promise-card-img">
+            <h3>Gathered Daily</h3>
+            <p>Every single egg is hand-collected in the morning and inspected for peak quality. Guaranteed fresh delivery to your door.</p>
+          </div>
+          <div class="promise-card">
+            <img src="assets/organic_diet.png" alt="Free-range chickens feeding on pasture grass" class="promise-card-img">
+            <h3>100% Organic Diet</h3>
+            <p>Our hens roam freely on nutrient-rich pastures and eat certified organic feed. No hormones, no GMOs, no synthetic additives.</p>
+          </div>
+          <div class="promise-card">
+            <img src="assets/animal_welfare.png" alt="Happy chicken in a clean nesting box" class="promise-card-img">
+            <h3>Animal Welfare First</h3>
+            <p>Certified Humane standards. Nesting boxes, dust baths, and natural shelters ensure our flocks live stress-free, healthy lives.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="section" id="featured-products">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured From Our Farm</h2>
+          <p>Handpicked selections direct from our pastures to your dining table.</p>
+        </div>
+        <div class="grid-3">
+          <!-- Product Card 1 -->
+          <div class="product-card" data-title="Pasture-Raised Brown Eggs" data-price="$6.50 / Dozen" data-category-label="Fresh Eggs" data-desc="Rich yolk, sturdy shells, and incredible flavor. Our signature brown eggs are laid daily by hens with full pasture access." data-status="In Stock" data-origin="Coop A - East Pasture" data-weight="Approx. 750g per carton" data-shelf-life="Keep refrigerated, best within 30 days">
+            <div class="product-img-wrapper">
+              <span class="product-tag">Fresh Daily</span>
+              <img src="assets/eggs_basket.png" alt="Carton of fresh pasture raised brown eggs on hay">
+            </div>
+            <div class="product-info">
+              <h4>Pasture-Raised Brown Eggs</h4>
+              <p class="product-desc">Rich yolk, sturdy shells, and incredible flavor. Our signature brown eggs are laid daily.</p>
+              <div class="product-footer">
+                <span class="product-price">$6.50 <span style="font-size: 0.8rem; font-weight: normal;">/ Dozen</span></span>
+                <button class="btn btn-secondary view-details-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;" id="view-eggs">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2 -->
+          <div class="product-card" data-title="Organic Free-Range Eggs" data-price="$7.50 / Dozen" data-category-label="Organic Eggs" data-desc="Certified USDA organic farm eggs. Laid by flocks fed exclusively organic grains with zero chemicals or pesticides in their pasture." data-status="Limited Stock" data-origin="Coop B - Organic Valley" data-weight="Approx. 720g per carton" data-shelf-life="Keep refrigerated, best within 30 days">
+            <div class="product-img-wrapper">
+              <span class="product-tag">USDA Organic</span>
+              <img src="assets/organic_eggs.png" alt="Basket of USDA organic farm fresh eggs">
+            </div>
+            <div class="product-info">
+              <h4>Organic Free-Range Eggs</h4>
+              <p class="product-desc">Certified USDA organic. Laid by flocks fed exclusively organic grains with zero pesticide pasture.</p>
+              <div class="product-footer">
+                <span class="product-price">$7.50 <span style="font-size: 0.8rem; font-weight: normal;">/ Dozen</span></span>
+                <button class="btn btn-secondary view-details-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;" id="view-organic-eggs">View Details</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3 -->
+          <div class="product-card" data-title="Whole Free-Range Chicken" data-price="$5.99 / lb" data-category-label="Whole Chicken" data-desc="Tender, lean, and highly nutritious. Raised on rotating fields with full access to natural seeds, insects, and clean water." data-status="In Stock" data-origin="North Pasture Flocks" data-weight="4.0 - 5.5 lbs average" data-shelf-life="Keep frozen, or cook within 3 days of delivery">
+            <div class="product-img-wrapper">
+              <span class="product-tag">Pasture Poultry</span>
+              <img src="assets/fresh_poultry.png" alt="Fresh raw whole chicken on wooden board with herbs">
+            </div>
+            <div class="product-info">
+              <h4>Whole Free-Range Chicken</h4>
+              <p class="product-desc">Tender, lean, and highly nutritious. Raised on rotating fields with access to natural feeds.</p>
+              <div class="product-footer">
+                <span class="product-price">$5.99 <span style="font-size: 0.8rem; font-weight: normal;">/ lb</span></span>
+                <button class="btn btn-secondary view-details-btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;" id="view-poultry">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 3.5rem;">
+          <a href="products.html" class="btn btn-primary">Browse All Farm Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US -->
+    <section class="section section-bg" id="why-choose-us">
+      <div class="container grid-2">
+        <div class="hero-image-container">
+          <img src="assets/farm_tour.png" alt="A family interacting with free range hens on our farm" style="border-radius: var(--border-radius-lg); box-shadow: var(--shadow);">
+        </div>
+        <div class="hero-content">
+          <h2 style="margin-bottom: 1.5rem;">Why Families & Chefs Choose Our Farm</h2>
+          <p style="margin-bottom: 2rem;">Since 1994, Feather & Yolk Farm has maintained a transparent, trace-to-coop pipeline. We don't warehouse our products; we pack them straight from nesting boxes to refrigerated delivery trucks.</p>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">✓</span>
+              <div>
+                <strong>Farm-to-Door in 24 Hours:</strong> Eggs delivered fresh within a day of being laid.
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">✓</span>
+              <div>
+                <strong>Zero Additives or Injections:</strong> Safe, antibiotic-free meats you can serve with confidence.
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">✓</span>
+              <div>
+                <strong>Environmental Stewardship:</strong> Solar-powered egg washing facilities and plastic-free packaging.
+              </div>
+            </li>
+          </ul>
+          <a href="about.html" class="btn btn-secondary">Learn About Our Practices</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUSTOMER TESTIMONIALS -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <h2>Loved by Home Cooks & Culinary Experts</h2>
+          <p>Read what our neighborhood and restaurant partners say about Feather & Yolk.</p>
+        </div>
+        <div class="grid-3">
+          <div class="testimonial-card">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <p class="testimonial-text">"The yolk color is a rich orange that you just can't find in grocery store eggs. I use them for my baking business, and my customers immediately noticed the fluffier textures."</p>
+            <div class="user-profile">
+              <img src="assets/avatar_baker.png" alt="Sarah Adams" class="user-avatar">
+              <div class="user-details">
+                <h5>Sarah Adams</h5>
+                <span>Bakehouse Owner</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <p class="testimonial-text">"As an executive chef, consistency is vital. Feather & Yolk delivers fresh pasture chickens weekly. The meat is tender and flavor-packed. Excellent wholesale customer support."</p>
+            <div class="user-profile">
+              <img src="assets/avatar_chef.png" alt="Chef Marcus Dubois" class="user-avatar">
+              <div class="user-details">
+                <h5>Chef Marcus Dubois</h5>
+                <span>The Green Bistro</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+            </div>
+            <p class="testimonial-text">"My kids love visiting during their farm tours, and buying their fresh organic eggs directly has become a weekly family ritual. Healthy chickens make healthy eggs!"</p>
+            <div class="user-profile">
+              <img src="assets/avatar_mom.png" alt="Emily Lawson" class="user-avatar">
+              <div class="user-details">
+                <h5>Emily Lawson</h5>
+                <span>Local Resident & Mom</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PRODUCT SPEC DETAIL MODAL (SHARED ACCROSS PAGES) -->
+  <div class="modal" id="product-modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-container">
+      <button class="modal-close" aria-label="Close Modal">✕</button>
+      <div class="modal-image">
+        <img src="assets/eggs_basket.png" alt="Product Image">
+      </div>
+      <div class="modal-content">
+        <div class="modal-header-meta">
+          <span class="modal-category">Fresh Eggs</span>
+          <span class="modal-status">In Stock</span>
+        </div>
+        <h3 class="modal-title">Pasture-Raised Eggs</h3>
+        <span class="modal-price">$6.50 / Dozen</span>
+        <p class="modal-desc">Rich yolk, sturdy shells, and incredible flavor. Our signature brown eggs are laid daily by hens with full pasture access.</p>
+        
+        <div class="modal-specs">
+          <div class="spec-item">
+            <strong>Origin Point:</strong>
+            <span class="spec-origin">Coop A - East Pasture</span>
+          </div>
+          <div class="spec-item">
+            <strong>Weight Class:</strong>
+            <span class="spec-weight">Approx. 750g per carton</span>
+          </div>
+          <div class="spec-item">
+            <strong>Storage Info:</strong>
+            <span class="spec-shelflife">Keep refrigerated, best within 30 days</span>
+          </div>
+          <div class="spec-item">
+            <strong>Certifications:</strong>
+            <span>Certified Humane, GMO-Free</span>
+          </div>
+        </div>
+        
+        <div style="margin-top: auto; display: flex; gap: 1rem;">
+          <a href="contact.html" class="btn btn-primary" style="flex-grow: 1;">Enquire for Purchase</a>
+          <a href="bulk.html" class="btn btn-secondary">Bulk Inquiries</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Feather & Yolk Farm</h3>
+          <p>Bringing nature's finest pasture eggs and sustainable poultry from our fields directly to your table. Healthy, ethical, and delicious.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Farm Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Wholesale Hub</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="tours.html">Book a Tour</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="quality.html">Quality Standards</a></li>
+            <li><a href="contact.html">Support & FAQ</a></li>
+            <li><a href="bulk.html">Partnership Program</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-col">
+          <h4>Contact the Coop</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+1 (555) 374-3447 (EGG-EGGS)</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>fresh@featherandyolkfarm.local</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>4200 Pasture Lane, Farmville, FV 84321</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Feather & Yolk Farm. All Rights Reserved. Coops Certified Organic.</span>
+        <span>Designed with 💚 for Sustainable Agriculture</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
