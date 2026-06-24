@@ -15,8 +15,8 @@
   <nav class="mobile-nav" aria-label="Mobile Navigation">
     <div class="mobile-nav-header">
       <a href="index.html" class="logo">
-        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="3"/></svg>
-        <span>Feather & Yolk</span>
+        <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain; margin-right: 8px;">
+        <span>Feather & Yolk Farm</span>
       </a>
       <button class="mobile-nav-close btn-icon" aria-label="Close Mobile Menu">✕</button>
     </div>
@@ -41,11 +41,8 @@
   <header>
     <div class="container header-container">
       <a href="index.html" class="logo">
-        <svg viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-          <circle cx="12" cy="12" r="3"/>
-        </svg>
-        <span>Feather & Yolk</span>
+        <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain; margin-right: 8px;">
+        <span>Feather & Yolk Farm</span>
       </a>
       
       <ul class="nav-menu">
@@ -75,13 +72,7 @@
     <!-- VIDEO HERO SECTION -->
     <section class="video-hero">
       <div class="video-hero-bg">
-        <!-- We use a background video loop. If missing, the CSS falls back to a gorgeous animated geometric gradient background. -->
-        <div class="video-placeholder-graphic">
-          <!-- Optional inline HTML5 Video element -->
-          <video autoplay muted loop playsinline>
-            <source src="assets/farm_video_mock.mp4" type="video/mp4">
-          </video>
-        </div>
+        <img src="assets/wholesale_hero.png" alt="Wholesale Farm Delivery Background" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
       <div class="video-hero-overlay"></div>
       
@@ -262,12 +253,12 @@
         </div>
         <div class="grid-2">
           <div class="promise-card">
-            <span style="font-size: 1.5rem; display: block; margin-bottom: 1rem;">🥐</span>
+            <img src="assets/bakery_story.png" alt="Bakehouse Cafe Pastries" class="promise-card-img">
             <h3>Bakehouse Café & Pastry</h3>
             <p><strong>"The volume is unmatched."</strong> Baker Sarah Adams switched to our pasture-raised eggs and recorded a 15% volume increase in soufflés, meringues, and sponge cakes. The sturdy shells and thick whites create incredibly stable whipping yields.</p>
           </div>
           <div class="promise-card">
-            <span style="font-size: 1.5rem; display: block; margin-bottom: 1rem;">🍽️</span>
+            <img src="assets/bistro_story.png" alt="The Green Bistro Chicken Dish" class="promise-card-img">
             <h3>The Green Bistro</h3>
             <p><strong>"Traceability is our menu's highlight."</strong> Chef Marcus Dubois features our pasture chicken breast on his menu, highlighting the exact coop block. Customers appreciate the clean, antibiotic-free poultry and robust pasture flavor profile.</p>
           </div>
@@ -281,7 +272,7 @@
         <div class="hero-content">
           <h2>Wholesale Delivery Zones</h2>
           <p style="margin-bottom: 1.5rem;">We operate a dedicated refrigerated fleet to service B2B partners. Review our regional shipping corridors and lead times below:</p>
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+          <ul class="text-start" style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
             <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
               <span style="color: var(--primary); font-size: 1.25rem;">📍</span>
               <div>
@@ -313,7 +304,10 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-brand">
-          <h3>Feather & Yolk Farm</h3>
+          <a href="index.html" style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; text-decoration: none; color: var(--primary);">
+            <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain;">
+            <h3 style="margin: 0;">Feather & Yolk Farm</h3>
+          </a>
           <p>Bringing nature's finest pasture eggs and sustainable poultry from our fields directly to your table. Healthy, ethical, and delicious.</p>
           <div class="footer-socials">
             <a href="#" aria-label="Facebook">
