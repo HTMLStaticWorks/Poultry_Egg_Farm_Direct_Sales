@@ -1837,6 +1837,13 @@ footer h3, footer h4 {
   h2 { font-size: 2rem; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
   .footer-top { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+  .hamburger {
+    display: block;
+  }
+  
+  .nav-menu {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1853,6 +1860,10 @@ footer h3, footer h4 {
   /* Center headings, buttons, images, and numbers */
   h1, h2, h3, h4, h5, h6 {
     text-align: center;
+  }
+  
+  footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+    text-align: start;
   }
   
   .hero-content {
@@ -1947,14 +1958,7 @@ footer h3, footer h4 {
     grid-template-columns: repeat(2, 1fr);
   }
   
-  .hamburger {
-    display: block;
-  }
-  
-  .nav-menu {
-    display: none;
-  }
-  
+
   .grid-3, .grid-2 {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -2134,4 +2138,9 @@ html[dir="rtl"] .back-to-top {
     height: 18px;
   }
 }
+}
 
+/* Utility Classes */
+.text-start {
+  text-align: start !important;
+}
