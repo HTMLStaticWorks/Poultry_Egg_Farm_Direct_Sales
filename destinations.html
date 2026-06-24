@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations | Trekking & Hiking Tour Company</title>
+  <meta name="description" content="Discover breathtaking trekking destinations, from the Swiss Alps to Patagonia.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-hero {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero/hero-1.png') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFF;
+    }
+    
+    .dest-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 50px;
+      align-items: center;
+    }
+    
+    .dest-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    
+    .dest-row img {
+      flex: 1;
+      min-width: 300px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .dest-info {
+      flex: 1;
+      min-width: 300px;
+      padding: 20px;
+    }
+    
+    .map-container {
+      width: 100%;
+      height: 500px;
+      background: #e0e0e0;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .dark-mode .map-container {
+      background: #2a2a2a;
+    }
+    
+    .map-placeholder-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+    
+    .map-text {
+      position: absolute;
+      z-index: 2;
+      background: rgba(255,255,255,0.8);
+      padding: 20px 40px;
+      border-radius: 30px;
+      color: #333;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header placeholder -->
+  <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
+    <div class="container">
+      <a href="index.html" class="logo" style="color: var(--text-color);"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
+        <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
+        <a href="about.html" class="nav-link" style="color: var(--text-color);">About Us</a>
+        <a href="services.html" class="nav-link" style="color: var(--text-color);">Services</a>
+        <a href="packages.html" class="nav-link" style="color: var(--text-color);">Packages</a>
+        <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
+        <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
+        <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
+      </nav>
+      <div class="controls">
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero parallax">
+    <div class="container anim-zoom-in">
+      <h1 style="font-size: 3.5rem;">Explore Destinations</h1>
+      <p>From towering peaks to dense jungles, find your next challenge.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      
+      <!-- Mountain Regions -->
+      <div class="dest-row anim-fade-up">
+        <img src="images/hero/hero-2.png" alt="Mountains">
+        <div class="dest-info">
+          <h2 class="section-title" style="font-size: 2rem;">Mountain Regions</h2>
+          <p>Conquer the highest peaks in the world. Our mountain regions offer breathtaking views and challenging ascents for serious adventurers.</p>
+        </div>
+      </div>
+      
+      <!-- Forest Trails -->
+      <div class="dest-row anim-fade-up">
+        <img src="images/hero/hero-3.png" alt="Forest">
+        <div class="dest-info">
+          <h2 class="section-title" style="font-size: 2rem;">Forest Trails</h2>
+          <p>Immerse yourself in nature. Walk through ancient forests, spot exotic wildlife, and enjoy the serenity of dense canopies.</p>
+        </div>
+      </div>
+
+      <!-- Waterfall Treks -->
+      <div class="dest-row anim-fade-up">
+        <img src="images/hero/hero-1.png" alt="Waterfall">
+        <div class="dest-info">
+          <h2 class="section-title" style="font-size: 2rem;">Waterfall Treks</h2>
+          <p>Follow the sound of rushing water. Discover hidden waterfalls, natural pools, and lush vegetation.</p>
+        </div>
+      </div>
+
+      <!-- Snow Expeditions -->
+      <div class="dest-row anim-fade-up">
+        <img src="images/hero/hero-2.png" alt="Snow">
+        <div class="dest-info">
+          <h2 class="section-title" style="font-size: 2rem;">Snow Expeditions</h2>
+          <p>Brave the cold for an unforgettable experience. Traverse glaciers, ice caves, and snow-capped peaks.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Interactive Map Placeholder -->
+  <section class="section" style="background: var(--surface-color);">
+    <div class="container text-center">
+      <h2 class="section-title anim-fade-up">Interactive Map</h2>
+      <p class="anim-fade-up" style="margin-bottom: 40px;">Explore our global presence and trail locations.</p>
+      
+      <div class="map-container anim-zoom-in">
+        <img src="images/hero/hero-1.png" class="map-placeholder-img" alt="Map Base">
+        <div class="map-text"><i class="fas fa-map-marked-alt"></i> Google Maps / Interactive Map Integration Here</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Tips Section -->
+  <section class="section" style="background: var(--surface-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Regional Insights</h2>
+        <p class="section-subtitle">Essential knowledge before you touch down in a new country.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div class="premium-card anim-zoom-in">
+          <div class="card-content">
+            <i class="fas fa-passport" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Visa Requirements</h3>
+            <p style="color: var(--text-light);">Navigating trekking permits and tourist visas for remote regions.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
+          <div class="card-content">
+            <i class="fas fa-cloud-sun-rain" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Micro-Climates</h3>
+            <p style="color: var(--text-light);">How to pack layers for unpredictable mountain weather shifts.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
+          <div class="card-content">
+            <i class="fas fa-om" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Cultural Etiquette</h3>
+            <p style="color: var(--text-light);">Respecting local customs and religious sites along the trail.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Blog Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Latest Adventure News</h2>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card anim-fade-right">
+          <img src="images/blog/patagonia.jpg" alt="Blog post thumbnail">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">October 15, 2026</span>
+          <h3 style="margin: 10px 0;">Patagonia: The Ultimate Travel Guide</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Everything you need to know about traversing the rugged and breathtaking landscapes of Patagonia.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card anim-fade-left">
+          <img src="images/blog/iceland.jpg" alt="Blog post thumbnail">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">September 28, 2026</span>
+          <h3 style="margin: 10px 0;">Hidden Waterfalls of Iceland</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Skip the tourist traps and explore these secret, stunning waterfalls nestled deep in Iceland's wilderness.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
+          <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="packages.html">Trek Packages</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Adventures</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mountain Trekking</a></li>
+            <li><a href="#">Forest Trails</a></li>
+            <li><a href="#">Snow Expeditions</a></li>
+            <li><a href="#">Camping</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Ave, NY 10001</li>
+            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@trekX.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bottom-footer">
+        <p>&copy; 2026 Trekking & Hiking Tour Company. All Rights Reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

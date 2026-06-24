@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Trekking & Hiking Tour Company</title>
+  <meta name="description" content="Explore our premium trekking services, camping expeditions, and professional hiking guides.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-hero {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero/hero-3.png') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFF;
+    }
+    
+    .service-block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 80px;
+    }
+    
+    .service-block:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+    
+    .service-img {
+      flex: 1;
+      min-width: 300px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .service-img img {
+      width: 100%;
+      transition: transform var(--transition-smooth);
+    }
+    
+    .service-img:hover img {
+      transform: scale(1.05);
+    }
+    
+    .service-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .service-icon {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+    }
+    
+    .faq-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .faq-item {
+      background: var(--surface-color);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s ease;
+    }
+    
+    .faq-item[open] {
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-color);
+    }
+    
+    .faq-item summary {
+      padding: 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--text-color);
+    }
+    
+    .faq-item summary::after {
+      content: '+';
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item[open] summary::after {
+      content: '−';
+      transform: rotate(180deg);
+    }
+    
+    .faq-content {
+      padding: 0 20px 20px;
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- Header placeholder -->
+  <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
+    <div class="container">
+      <a href="index.html" class="logo" style="color: var(--text-color);"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
+        <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
+        <a href="about.html" class="nav-link" style="color: var(--text-color);">About Us</a>
+        <a href="services.html" class="nav-link active" style="color: var(--text-color);">Services</a>
+        <a href="packages.html" class="nav-link" style="color: var(--text-color);">Packages</a>
+        <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
+        <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
+        <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
+      </nav>
+      <div class="controls">
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero parallax">
+    <div class="container anim-zoom-in">
+      <h1 style="font-size: 3.5rem;">Our Services</h1>
+      <p>Premium adventure experiences tailored just for you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      
+      <!-- Service 1 -->
+      <div class="service-block">
+        <div class="service-img anim-fade-right">
+          <img src="images/hero/hero-2.png" alt="Mountain Trekking">
+        </div>
+        <div class="service-text anim-fade-left">
+          <i class="fas fa-mountain service-icon"></i>
+          <h2 class="section-title">Mountain Trekking</h2>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Challenge yourself with our guided mountain trekking expeditions. From beginner-friendly slopes to advanced technical climbs, we offer premium support and gear.</p>
+          <ul style="color: var(--text-light); margin-bottom: 20px; list-style: inside circle; line-height: 1.8;">
+            <li><strong>Altitude Acclimatization Protocols:</strong> Every route features built-in rest days and gradual elevation climbs to ensure your safety.</li>
+            <li><strong>Certified Sherpas & Guides:</strong> Lead guides are Wilderness First Responder (WFR) certified with deep regional knowledge.</li>
+            <li><strong>Advanced Safety Gear:</strong> Satellite tracking, oxygen, and emergency communications are standard on all climbs.</li>
+          </ul>
+          <a href="packages.html" class="btn btn-secondary">View Packages</a>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-block">
+        <div class="service-img anim-fade-left">
+          <img src="images/hero/hero-4.png" alt="Camping Tours">
+        </div>
+        <div class="service-text anim-fade-right">
+          <i class="fas fa-campground service-icon"></i>
+          <h2 class="section-title">Luxury Camping Tours</h2>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Experience nature without sacrificing comfort. Our glamping and luxury camping tours provide gourmet meals, comfortable beds, and stunning views under the stars.</p>
+          <ul style="color: var(--text-light); margin-bottom: 20px; list-style: inside circle; line-height: 1.8;">
+            <li><strong>Premium Glamping Accommodations:</strong> Rest easy in spacious, standing-height dome tents equipped with comfortable raised beds.</li>
+            <li><strong>Gourmet Wilderness Dining:</strong> Enjoy delicious, chef-prepared hot meals featuring fresh local ingredients.</li>
+            <li><strong>Evening Campfires & Stargazing:</strong> Unwind under the stars with hot beverages and cozy group gatherings.</li>
+          </ul>
+          <a href="packages.html" class="btn btn-secondary">Explore Camping</a>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-block">
+        <div class="service-img anim-fade-right">
+          <img src="images/hero/hero-1.png" alt="Corporate Team Building">
+        </div>
+        <div class="service-text anim-fade-left">
+          <i class="fas fa-users service-icon"></i>
+          <h2 class="section-title">Corporate Team Building</h2>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Strengthen your team's bond with our customized outdoor adventures. We design activities that promote leadership, communication, and trust.</p>
+          <ul style="color: var(--text-light); margin-bottom: 20px; list-style: inside circle; line-height: 1.8;">
+            <li><strong>Custom Facilitated Challenges:</strong> Tailored group activities focused on icebreaking, trust, and shared achievements.</li>
+            <li><strong>Leadership & Communication Workshops:</strong> Guided reflections to translate outdoor problem-solving back to the workspace.</li>
+            <li><strong>Outdoor Wilderness Survival Skills:</strong> Engaging practical training in navigation, shelter building, and campfire safety.</li>
+          </ul>
+          <a href="contact.html" class="btn btn-secondary">Request Quote</a>
+        </div>
+      </div>
+
+      <!-- Service 4 -->
+      <div class="service-block">
+        <div class="service-img anim-fade-left">
+          <img src="images/hero/hero-3.png" alt="Custom Travel">
+        </div>
+        <div class="service-text anim-fade-right">
+          <i class="fas fa-map service-icon"></i>
+          <h2 class="section-title">Custom Travel Planning</h2>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Want a unique itinerary? Our expert travel planners will craft a bespoke adventure suited perfectly to your group's skills, timeline, and desires.</p>
+          <ul style="color: var(--text-light); margin-bottom: 20px; list-style: inside circle; line-height: 1.8;">
+            <li><strong>Private Route Consultations:</strong> One-on-one sessions with our travel specialists to co-create your dream path.</li>
+            <li><strong>Flexible Timing & Accommodations:</strong> Adjust schedules, trail intensities, and hotel tiers to suit your group.</li>
+            <li><strong>24/7 Remote Dispatch Support:</strong> Live tracking and support line available throughout your journey.</li>
+          </ul>
+          <a href="contact.html" class="btn btn-secondary">Plan Your Trip</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" style="background: var(--bg-color); border-top: 1px solid var(--border-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">Got questions about our services? Find your answers here.</p>
+      </div>
+      <div class="faq-grid" style="max-width: 800px; margin: 40px auto 0;">
+        <details class="faq-item anim-fade-up">
+          <summary>What is included in the premium trekking package?</summary>
+          <div class="faq-content">
+            <p>Our premium packages include professional certified guides, high-quality gear (tents, sleeping bags, and safety equipment), gourmet meals, permits, local transport, and emergency medical support including oxygen cylinders and satellite phones.</p>
+          </div>
+        </details>
+        <details class="faq-item anim-fade-up" style="transition-delay: 0.1s;">
+          <summary>Do I need previous climbing experience for mountain trekking?</summary>
+          <div class="faq-content">
+            <p>We cater to all skill levels. Our trekking itineraries are marked with difficulty ratings. While beginner trails require no prior experience (just basic physical fitness), advanced high-altitude treks require technical climbing training, which we can provide before the expedition.</p>
+          </div>
+        </details>
+        <details class="faq-item anim-fade-up" style="transition-delay: 0.2s;">
+          <summary>How do you ensure safety on high-altitude expeditions?</summary>
+          <div class="faq-content">
+            <p>Safety is our top priority. We maintain a 1:3 guide-to-client ratio, carry satellite communication gear, monitor vital signs daily for acute mountain sickness (AMS), and have a guaranteed helicopter evacuation plan in place for all high-altitude routes.</p>
+          </div>
+        </details>
+        <details class="faq-item anim-fade-up" style="transition-delay: 0.3s;">
+          <summary>Can we customize our group itinerary?</summary>
+          <div class="faq-content">
+            <p>Yes, absolutely! Through our Custom Travel Planning service, we can tailor the route, duration, accommodation style, and difficulty level to suit the specific needs and goals of your group.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Tips Section -->
+  <section class="section" style="background: var(--surface-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Expedition Prep</h2>
+        <p class="section-subtitle">Get ready for your guided adventure with our expert checklist.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div class="premium-card anim-zoom-in">
+          <div class="card-content">
+            <i class="fas fa-dumbbell" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Fitness Training</h3>
+            <p style="color: var(--text-light);">A 12-week workout plan to prepare your body for the elevation.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
+          <div class="card-content">
+            <i class="fas fa-campground" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Gear Rentals</h3>
+            <p style="color: var(--text-light);">What to rent from us versus what to buy and bring yourself.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
+          <div class="card-content">
+            <i class="fas fa-file-medical" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Travel Insurance</h3>
+            <p style="color: var(--text-light);">How to pick the right evacuation policy for high-altitude zones.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Blog Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Latest Adventure News</h2>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card anim-fade-right">
+          <img src="images/blog/guide.jpg" alt="Blog post thumbnail">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">August 12, 2026</span>
+          <h3 style="margin: 10px 0;">Why You Need a Professional Guide</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Navigating untamed wilderness can be dangerous. Learn why hiring a professional guide is non-negotiable.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card anim-fade-left">
+          <img src="images/blog/helicopter.jpg" alt="Blog post thumbnail">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">August 01, 2026</span>
+          <h3 style="margin: 10px 0;">Inside Our Helicopter Rescue Training</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">A behind-the-scenes look at how our rescue teams prepare for emergency evacuations at high altitudes.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
+          <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="packages.html">Trek Packages</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Adventures</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mountain Trekking</a></li>
+            <li><a href="#">Forest Trails</a></li>
+            <li><a href="#">Snow Expeditions</a></li>
+            <li><a href="#">Camping</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Ave, NY 10001</li>
+            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@trekX.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bottom-footer">
+        <p>&copy; 2026 Trekking & Hiking Tour Company. All Rights Reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

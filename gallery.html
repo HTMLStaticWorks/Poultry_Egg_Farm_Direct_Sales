@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Trekking & Hiking Tour Company</title>
+  <meta name="description" content="View our stunning gallery of past trekking expeditions, beautiful landscapes, and happy hikers.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-hero {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero/hero-2.png') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFF;
+    }
+    
+    .masonry-grid {
+      column-count: 3;
+      column-gap: 20px;
+    }
+    
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      overflow: hidden;
+      position: relative;
+    }
+    
+    .masonry-item img {
+      width: 100%;
+      display: block;
+      transition: transform var(--transition-smooth);
+    }
+    
+    .masonry-item:hover img {
+      transform: scale(1.1);
+    }
+    
+    .overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity var(--transition-fast);
+      color: #FFF;
+      font-size: 2rem;
+    }
+    
+    .masonry-item:hover .overlay {
+      opacity: 1;
+    }
+    
+    .ig-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 5px;
+    }
+    
+    .ig-item {
+      aspect-ratio: 1;
+      overflow: hidden;
+    }
+    
+    .ig-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: filter 0.3s ease;
+    }
+    
+    .ig-item:hover img {
+      filter: brightness(0.7);
+    }
+    
+    @media (max-width: 992px) {
+      .masonry-grid { column-count: 2; }
+      .ig-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .masonry-grid { column-count: 1; }
+      .ig-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+  <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
+    <div class="container">
+      <a href="index.html" class="logo" style="color: var(--text-color);"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
+        <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
+        <a href="about.html" class="nav-link" style="color: var(--text-color);">About Us</a>
+        <a href="services.html" class="nav-link" style="color: var(--text-color);">Services</a>
+        <a href="packages.html" class="nav-link" style="color: var(--text-color);">Packages</a>
+        <a href="gallery.html" class="nav-link active" style="color: var(--text-color);">Gallery</a>
+        <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
+        <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
+      </nav>
+      <div class="controls">
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero parallax">
+    <div class="container anim-zoom-in">
+      <h1 style="font-size: 3.5rem;">Visual Journey</h1>
+      <p>Browse through moments captured during our incredible adventures.</p>
+    </div>
+  </section>
+
+  <!-- Photo Gallery -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Photo Gallery</h2>
+      </div>
+      <div class="masonry-grid">
+        <div class="masonry-item anim-fade-up"><img src="images/blog/swiss_alps.png" alt="Swiss Alps"><div class="overlay"><i class="fas fa-search-plus"></i></div></div>
+        <div class="masonry-item anim-fade-up" style="transition-delay: 0.1s;"><img src="images/treks/blue_lake_trail.png" alt="Blue Lake Trail"><div class="overlay"><i class="fas fa-search-plus"></i></div></div>
+        <div class="masonry-item anim-fade-up" style="transition-delay: 0.2s;"><img src="images/blog/asia_trails.png" alt="Asia Trails"><div class="overlay"><i class="fas fa-search-plus"></i></div></div>
+        <div class="masonry-item anim-fade-up" style="transition-delay: 0.3s;"><img src="images/blog/kilimanjaro.jpg" alt="Kilimanjaro Summit"><div class="overlay"><i class="fas fa-search-plus"></i></div></div>
+        <div class="masonry-item anim-fade-up" style="transition-delay: 0.4s;"><img src="images/blog/patagonia.jpg" alt="Patagonia Wilderness"><div class="overlay"><i class="fas fa-search-plus"></i></div></div>
+        <div class="masonry-item anim-fade-up" style="transition-delay: 0.5s;"><img src="images/blog/iceland.jpg" alt="Iceland Highlands"><div class="overlay"><i class="fas fa-search-plus"></i></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Grid -->
+  <section class="section" style="padding-bottom: 0;">
+    <div class="text-center anim-fade-up" style="margin-bottom: 40px;">
+      <h2 class="section-title">Follow Us @TrekX</h2>
+    </div>
+    <div class="ig-grid">
+      <div class="ig-item"><img src="images/treks/everest.png" alt="Everest Base Camp"></div>
+      <div class="ig-item"><img src="images/treks/meadow_valley.png" alt="Meadow Valley Camp"></div>
+      <div class="ig-item"><img src="images/blog/our_story.png" alt="Campfire Story"></div>
+      <div class="ig-item"><img src="images/tips/adventure_photography.png" alt="Adventure Photography"></div>
+      <div class="ig-item"><img src="images/treks/rocky.png" alt="Highland Trail"></div>
+      <div class="ig-item"><img src="images/treks/amazon.png" alt="Amazon Expedition"></div>
+    </div>
+  </section>
+
+  <!-- Travel Tips Section -->
+  <section class="section" style="background: var(--surface-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Capture The Journey</h2>
+        <p class="section-subtitle">Pro tips for documenting your expedition.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div class="premium-card anim-zoom-in">
+          <div class="card-content">
+            <i class="fas fa-video" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Action Cameras</h3>
+            <p style="color: var(--text-light);">Best settings for GoPro and keeping batteries warm in the cold.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
+          <div class="card-content">
+            <i class="fas fa-paper-plane" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Drone Regulations</h3>
+            <p style="color: var(--text-light);">Where you can fly and how to secure aerial permits internationally.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
+          <div class="card-content">
+            <i class="fas fa-book-open" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Visual Storytelling</h3>
+            <p style="color: var(--text-light);">Framing shots to convey scale, emotion, and the thrill of the climb.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Blog Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Latest Adventure News</h2>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card anim-fade-right">
+          <img src="images/blog/photography.jpg" alt="Blog post thumbnail">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">November 05, 2026</span>
+          <h3 style="margin: 10px 0;">Tips for Stunning Landscape Photography</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Learn how to capture the grandeur of the mountains with our expert photography guide.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card anim-fade-left">
+          <img src="images/blog/camera_gear.jpg" alt="Blog post thumbnail">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">October 22, 2026</span>
+          <h3 style="margin: 10px 0;">Top 10 Most Photographed Trails in the World</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">These stunning locations offer the perfect backdrop for your next viral adventure post.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
+          <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="packages.html">Trek Packages</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Adventures</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mountain Trekking</a></li>
+            <li><a href="#">Forest Trails</a></li>
+            <li><a href="#">Snow Expeditions</a></li>
+            <li><a href="#">Camping</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Ave, NY 10001</li>
+            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@trekX.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bottom-footer">
+        <p>&copy; 2026 Trekking & Hiking Tour Company. All Rights Reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>

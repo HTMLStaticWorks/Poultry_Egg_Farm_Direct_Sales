@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trek Packages | Trekking & Hiking Tour Company</title>
+  <meta name="description" content="Browse our exclusive trekking and hiking packages for all experience levels around the globe.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .page-hero {
+      height: 60vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero/hero-4.png') center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #FFF;
+    }
+    
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    
+    .pricing-card {
+      background: var(--surface-color);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      transition: all var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .pricing-card.featured {
+      transform: scale(1.05);
+      background: var(--primary-color);
+      color: #FFF;
+      box-shadow: var(--shadow-premium);
+    }
+    
+    .pricing-card.featured .plan-price { color: #FFF; }
+    .pricing-card.featured li { color: #FFF; }
+    
+    .plan-name { font-size: 1.5rem; margin-bottom: 10px; }
+    .plan-price { font-size: 3rem; font-weight: 800; color: var(--accent-color); margin-bottom: 20px; }
+    .plan-price span { font-size: 1rem; color: var(--text-light); }
+    
+    .pricing-card ul {
+      margin-bottom: 30px;
+      text-align: left;
+    }
+    
+    .pricing-card li {
+      margin-bottom: 15px;
+      color: var(--text-light);
+    }
+    
+    .pricing-card li i {
+      color: var(--accent-color);
+      margin-right: 10px;
+    }
+    
+    .package-section { padding-bottom: 50px; }
+    
+    .treks-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 380px));
+      gap: 30px;
+      margin-top: 30px;
+      justify-content: center;
+    }
+    
+    .trek-meta {
+      display: flex;
+      justify-content: space-between;
+      color: var(--accent-color);
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+    
+    .trek-price {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-top: 10px;
+    }
+
+    @media screen and (min-width: 992px) {
+      .package-section .section-subtitle {
+        margin-left: 0;
+        margin-right: auto;
+        text-align: left;
+      }
+      [dir="rtl"] .package-section .section-subtitle {
+        margin-right: 0;
+        margin-left: auto;
+        text-align: right;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header placeholder -->
+  <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
+    <div class="container">
+      <a href="index.html" class="logo" style="color: var(--text-color);"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
+        <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
+        <a href="about.html" class="nav-link" style="color: var(--text-color);">About Us</a>
+        <a href="services.html" class="nav-link" style="color: var(--text-color);">Services</a>
+        <a href="packages.html" class="nav-link active" style="color: var(--text-color);">Packages</a>
+        <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
+        <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
+        <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
+        <div class="mobile-nav-controls">
+          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        </div>
+      </nav>
+      <div class="controls">
+        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
+        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+        <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero parallax">
+    <div class="container anim-zoom-in">
+      <h1 style="font-size: 3.5rem;">Trek Packages</h1>
+      <p>Find the perfect trail that matches your experience and desires.</p>
+    </div>
+  </section>
+
+  <!-- Beginner Treks -->
+  <section class="section package-section">
+    <div class="container">
+      <h2 class="section-title anim-fade-up">Beginner Treks</h2>
+      <p class="section-subtitle anim-fade-up">Perfect for families and those new to hiking.</p>
+      <div class="treks-grid">
+        <div class="premium-card anim-zoom-in">
+          <div class="card-img-wrapper"><img src="images/treks/blue_lake_trail.png" alt="Beginner Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>2 Days</span><span>Easy</span></div>
+            <h3>Blue Lake Trail</h3><p class="trek-price">$299</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s">
+          <div class="card-img-wrapper"><img src="images/treks/meadow_valley.png" alt="Beginner Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>3 Days</span><span>Easy</span></div>
+            <h3>Meadow Valley Camp</h3><p class="trek-price">$399</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s">
+          <div class="card-img-wrapper"><img src="images/treks/amazon.png" alt="Beginner Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>3 Days</span><span>Easy</span></div>
+            <h3>Amazon Rainforest Trail</h3><p class="trek-price">$599</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intermediate Treks -->
+  <section class="section package-section" style="background: var(--surface-color);">
+    <div class="container">
+      <h2 class="section-title anim-fade-up">Intermediate Treks</h2>
+      <div class="treks-grid">
+        <div class="premium-card anim-zoom-in">
+          <div class="card-img-wrapper"><img src="images/treks/rocky.png" alt="Inter Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>5 Days</span><span>Moderate</span></div>
+            <h3>Highland Pass</h3><p class="trek-price">$699</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s">
+          <div class="card-img-wrapper"><img src="images/blog/swiss_alps.png" alt="Inter Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>6 Days</span><span>Moderate</span></div>
+            <h3>Glacier View Trek</h3><p class="trek-price">$899</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s">
+          <div class="card-img-wrapper"><img src="images/treks/fjordlands_explorer.png" alt="Inter Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>4 Days</span><span>Moderate</span></div>
+            <h3>Fjordlands Explorer</h3><p class="trek-price">$549</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Advanced Treks -->
+  <section class="section package-section">
+    <div class="container">
+      <h2 class="section-title anim-fade-up">Advanced Treks</h2>
+      <div class="treks-grid">
+        <div class="premium-card anim-zoom-in">
+          <div class="card-img-wrapper"><img src="images/treks/everest.png" alt="Adv Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>14 Days</span><span>Difficult</span></div>
+            <h3>Everest Base Camp</h3><p class="trek-price">$1,499</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s">
+          <div class="card-img-wrapper"><img src="images/blog/kilimanjaro.jpg" alt="Adv Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>8 Days</span><span>Difficult</span></div>
+            <h3>Kilimanjaro Summit</h3><p class="trek-price">$1,899</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s">
+          <div class="card-img-wrapper"><img src="images/treks/patagonia_wilderness.png" alt="Adv Trek"></div>
+          <div class="card-content">
+            <div class="trek-meta"><span>12 Days</span><span>Difficult</span></div>
+            <h3>Patagonia Wilderness</h3><p class="trek-price">$1,299</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seasonal Packages -->
+  <section class="section package-section" style="background: var(--surface-color);">
+    <div class="container text-center">
+      <h2 class="section-title anim-fade-up">Seasonal Specials</h2>
+      <p class="anim-fade-up" style="margin-bottom: 30px;">Winter expeditions and Summer special trails available for limited time.</p>
+      <a href="contact.html" class="btn btn-primary anim-zoom-in">Inquire Now</a>
+    </div>
+  </section>
+
+  <!-- Pricing Plans -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Membership Plans</h2>
+        <p class="section-subtitle">Join our adventure club for exclusive benefits and discounts.</p>
+      </div>
+      
+      <div class="pricing-grid">
+        <div class="pricing-card anim-fade-right">
+          <h3 class="plan-name">Explorer</h3>
+          <div class="plan-price">$49<span>/mo</span></div>
+          <ul>
+            <li><i class="fas fa-check"></i> 10% Off all treks</li>
+            <li><i class="fas fa-check"></i> Free gear rental</li>
+            <li><i class="fas fa-check"></i> Monthly newsletter</li>
+            <li><i class="fas fa-times" style="color:#ccc"></i> VIP Support</li>
+          </ul>
+          <a href="signup.html" class="btn btn-secondary" style="width: 100%">Choose Plan</a>
+        </div>
+        
+        <div class="pricing-card featured anim-zoom-in">
+          <h3 class="plan-name">Adventurer</h3>
+          <div class="plan-price">$99<span>/mo</span></div>
+          <ul>
+            <li><i class="fas fa-check"></i> 20% Off all treks</li>
+            <li><i class="fas fa-check"></i> Premium gear rental</li>
+            <li><i class="fas fa-check"></i> Early access to new trails</li>
+            <li><i class="fas fa-check"></i> VIP Support</li>
+          </ul>
+          <a href="signup.html" class="btn btn-primary" style="width: 100%; background: #FFF; color: var(--primary-color);">Choose Plan</a>
+        </div>
+        
+        <div class="pricing-card anim-fade-left">
+          <h3 class="plan-name">Mountaineer</h3>
+          <div class="plan-price">$199<span>/mo</span></div>
+          <ul>
+            <li><i class="fas fa-check"></i> 30% Off all treks</li>
+            <li><i class="fas fa-check"></i> Free personal guide once a year</li>
+            <li><i class="fas fa-check"></i> Early access & VIP events</li>
+            <li><i class="fas fa-check"></i> 24/7 Concierge Support</li>
+          </ul>
+          <a href="signup.html" class="btn btn-secondary" style="width: 100%">Choose Plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Travel Tips Section -->
+  <section class="section" style="background: var(--surface-color);">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Booking Advice</h2>
+        <p class="section-subtitle">How to select the perfect package for your skill level.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div class="premium-card anim-zoom-in">
+          <div class="card-content">
+            <i class="fas fa-wallet" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Smart Budgeting</h3>
+            <p style="color: var(--text-light);">Hidden costs to watch out for and how to maximize your value.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
+          <div class="card-content">
+            <i class="fas fa-sun" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Seasonality</h3>
+            <p style="color: var(--text-light);">Understanding monsoon patterns and the best times to book.</p>
+          </div>
+        </div>
+        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
+          <div class="card-content">
+            <i class="fas fa-users" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
+            <h3>Group Dynamics</h3>
+            <p style="color: var(--text-light);">The pros and cons of joining open groups versus private tours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Blog Section -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center anim-fade-up">
+        <h2 class="section-title">Latest Adventure News</h2>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card anim-fade-right">
+          <img src="images/blog/treks.jpg" alt="Blog post thumbnail">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">September 04, 2026</span>
+          <h3 style="margin: 10px 0;">3-Day vs 7-Day Treks: Which is Right For You?</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Deciding on trip length can be tricky. We break down the pros and cons of short versus long expeditions.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="blog-card anim-fade-left">
+          <img src="images/blog/budget.jpg" alt="Blog post thumbnail">
+          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">August 25, 2026</span>
+          <h3 style="margin: 10px 0;">How to Budget for an International Expedition</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">From permits to flights, here is everything you need to factor into your adventure budget.</p>
+          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
+          <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="packages.html">Trek Packages</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Adventures</h4>
+          <ul class="footer-links">
+            <li><a href="#">Mountain Trekking</a></li>
+            <li><a href="#">Forest Trails</a></li>
+            <li><a href="#">Snow Expeditions</a></li>
+            <li><a href="#">Camping</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-links">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Ave, NY 10001</li>
+            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
+            <li><i class="fas fa-envelope"></i> info@trekX.com</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="bottom-footer">
+        <p>&copy; 2026 Trekking & Hiking Tour Company. All Rights Reserved.</p>
+        <div class="bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+</body>
+</html>
