@@ -1828,6 +1828,24 @@ footer h3, footer h4 {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .lab-card {
+    text-align: center;
+  }
+
+  .lab-icon {
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+  }
+
+  .lab-card h4 {
+    text-align: center;
+  }
+
+  .lab-card p {
+    text-align: center;
+  }
 }
 
 /* ==========================================
