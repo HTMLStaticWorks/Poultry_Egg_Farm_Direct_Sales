@@ -1844,6 +1844,30 @@ footer h3, footer h4 {
   .nav-menu {
     display: none;
   }
+  
+  .promise-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .promise-card h3 {
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .promise-card p {
+    flex-grow: 1;
+  }
+  .promise-card .card-icon {
+    margin-inline: auto;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 768px) {
