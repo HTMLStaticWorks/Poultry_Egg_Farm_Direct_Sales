@@ -300,6 +300,7 @@ header.header-scrolled {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   display: inline-block;
+  white-space: nowrap;
 }
 
 .nav-link:hover {
@@ -1888,6 +1889,10 @@ footer h3, footer h4 {
   
   footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
     text-align: start;
+  }
+
+  .contact-socials {
+    justify-content: center;
   }
   
   .hero-content {
