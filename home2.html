@@ -3,407 +3,367 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Home 2 - Premium Trekking & Hiking Tour Company">
-  <title>Home 2 | Trekking & Hiking Tour Company</title>
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
-  
+  <title>Wholesale Supply & Marketing Hub | Feather & Yolk Farm</title>
+  <meta name="description" content="Feather & Yolk Farm wholesale programs. Partner with us for daily delivery of pasture eggs and raw poultry to restaurants, hotels, grocery stores, and caterers.">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <style>
-    /* Home 2 Specific Styles */
-    .video-hero {
-      height: 100vh;
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      background: #000;
-    }
-    
-    .video-hero::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-      z-index: 1;
-    }
-    
-    .video-bg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translateX(-50%) translateY(-50%);
-      object-fit: cover;
-      opacity: 0.8;
-      /* Simulated video via background since no mp4 provided */
-      background: url('images/hero/hero-3.png') center/cover;
-    }
-    
-    .video-content {
-      position: relative;
-      z-index: 2;
-      color: #FFF;
-      max-width: 900px;
-      padding: 0 20px;
-    }
-    
-    .play-btn {
-      width: 80px;
-      height: 80px;
-      background: var(--accent-color);
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 auto 30px;
-      font-size: 2rem;
-      color: #FFF;
-      cursor: pointer;
-      box-shadow: 0 0 0 10px rgba(255, 111, 0, 0.3);
-      animation: pulse 2s infinite;
-      transition: all var(--transition-fast);
-    }
-    .play-btn:hover { transform: scale(1.1); }
-    
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255, 111, 0, 0.6); }
-      70% { box-shadow: 0 0 0 20px rgba(255, 111, 0, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255, 111, 0, 0); }
-    }
-    
-    .destination-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    
-    .dest-item {
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      height: 300px;
-    }
-    
-    .dest-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform var(--transition-smooth);
-    }
-    
-    .dest-item::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-    }
-    
-    .dest-content {
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      z-index: 2;
-      color: #FFF;
-    }
-    
-    .dest-item:hover img {
-      transform: scale(1.1);
-    }
-    
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-    }
-    
-    .gallery-item {
-      height: 250px;
-      overflow: hidden;
-      border-radius: 10px;
-    }
-    .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; height: 510px; }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-fast); }
-    .gallery-item:hover img { transform: scale(1.05); }
-    
-    @media (max-width: 992px) {
-      .destination-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery-item:nth-child(1) { height: 250px; }
-    }
-    @media (max-width: 768px) {
-      .destination-grid { grid-template-columns: 1fr; }
-    }
-  </style>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
 
-  <div class="loader-wrapper"><div class="loader"></div></div>
+  <!-- MOBILE SLIDE-IN MENU -->
+  <div class="mobile-overlay"></div>
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="logo">
+        <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain; margin-right: 8px;">
+        <span>Feather & Yolk Farm</span>
+      </a>
+      <button class="mobile-nav-close btn-icon" aria-label="Close Mobile Menu">✕</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="home2.html" class="mobile-nav-link active">Wholesale (Home 2)</a></li>
+      <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+      <li><a href="tours.html" class="mobile-nav-link">Farm Tours</a></li>
+      <li><a href="bulk.html" class="mobile-nav-link">Bulk Orders</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Our Farm</a></li>
+      <li><a href="quality.html" class="mobile-nav-link">Freshness & Quality</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-cta">
+      <h5>Order Fresh Eggs Today</h5>
+      <p style="font-size: 0.85rem; margin-bottom: 1rem;">Direct delivery to your doorstep within 24 hours.</p>
+      <a href="products.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Shop Products</a>
+    </div>
+  </nav>
 
-  <!-- Header Placeholder (Same as index) -->
-  <header class="header">
-    <div class="container">
-      <a href="index.html" class="logo"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
-      <nav class="nav-menu">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="home2.html" class="nav-link active">Home 2</a>
-        <a href="about.html" class="nav-link">About Us</a>
-        <a href="services.html" class="nav-link">Services</a>
-        <a href="packages.html" class="nav-link">Packages</a>
-        <a href="gallery.html" class="nav-link">Gallery</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <a href="signup.html" class="nav-link">Sign Up</a>
-        <div class="mobile-nav-controls">
-          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+  <!-- MAIN NAVIGATION HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain; margin-right: 8px;">
+        <span>Feather & Yolk Farm</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link active">Home 2</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="tours.html" class="nav-link">Farm Tours</a></li>
+        <li><a href="bulk.html" class="nav-link">Bulk Orders</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="quality.html" class="nav-link">Quality</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" aria-label="Toggle Theme"></button>
+        <div class="direction-toggle" aria-label="Toggle Layout Direction">
+          <button type="button" class="dir-btn ltr-btn active" data-dir="ltr">LTR</button>
+          <button type="button" class="dir-btn rtl-btn" data-dir="rtl">RTL</button>
+          <span class="dir-slider"></span>
         </div>
-      </nav>
-      <div class="controls">
-        <button class="icon-btn theme-toggle-btn" id="theme-toggle" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
-        <button class="mobile-toggle" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
+        <button class="hamburger" aria-label="Open Mobile Menu">☰</button>
       </div>
     </div>
   </header>
 
-  <!-- Video Hero -->
-  <section class="video-hero">
-    <div class="video-bg"></div>
-    <div class="video-content anim-zoom-in">
-      <div class="play-btn"><i class="fas fa-play"></i></div>
-      <h1 class="hero-title">Experience The Extraordinary</h1>
-      <p class="hero-subtitle">Immersive video experiences to inspire your next great adventure.</p>
-    </div>
-  </section>
-
-  <!-- Featured Destinations -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Featured Destinations</h2>
-        <p class="section-subtitle">Top picked locations for the season.</p>
+  <main>
+    <!-- VIDEO HERO SECTION -->
+    <section class="video-hero">
+      <div class="video-hero-bg">
+        <img src="assets/wholesale_hero.png" alt="Wholesale Farm Delivery Background" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
+      <div class="video-hero-overlay"></div>
       
-      <div class="destination-grid">
-        <div class="dest-item anim-fade-up">
-          <img src="images/hero/hero-1.png" alt="Mountain">
-          <div class="dest-content">
-            <h3>Swiss Alps</h3>
-            <p>Switzerland</p>
-          </div>
+      <div class="container text-center">
+        <div class="badge" style="background-color: var(--accent-gold); color: #2d2218; font-weight: 700; align-self: center;">
+          <span>🌾 Direct Wholesale Supply</span>
         </div>
-        <div class="dest-item anim-fade-up" style="transition-delay: 0.2s">
-          <img src="images/hero/hero-2.png" alt="Snow">
-          <div class="dest-content">
-            <h3>Mount Everest</h3>
-            <p>Nepal</p>
-          </div>
-        </div>
-        <div class="dest-item anim-fade-up" style="transition-delay: 0.4s">
-          <img src="images/hero/hero-4.png" alt="Camp">
-          <div class="dest-content">
-            <h3>Yosemite</h3>
-            <p>USA</p>
-          </div>
+        <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; max-width: 800px; margin-inline: auto;">Fresh Daily Harvest For Commercial Kitchens & Markets</h1>
+        <p style="font-size: 1.2rem; margin-bottom: 2.5rem; max-width: 600px; margin-inline: auto;">Eliminate brokers. Sourced straight from pasture coops and delivered refrigerated within 24 hours.</p>
+        <div class="hero-actions" style="justify-content: center;">
+          <a href="#quote-form-section" class="btn btn-accent" id="cta-request-pricing">Request Bulk Pricing</a>
+          <a href="bulk.html" class="btn btn-outline-white">Explore Wholesale Tiers</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Upcoming Tours -->
-  <section class="section" style="background: var(--surface-color);">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Upcoming Tours</h2>
-        <p class="section-subtitle">Join our scheduled group departures.</p>
+    <!-- HARVEST STATISTICS SHOWCASE -->
+    <section class="section" id="harvest-stats">
+      <div class="container">
+        <div class="section-header">
+          <h2>Fresh Daily Harvest Showcase</h2>
+          <p>Real-time farm metrics indicating our capacity, transparency, and product availability.</p>
+        </div>
+        
+        <div class="stats-grid grid-4">
+          <div class="stats-card">
+            <div class="stats-num">12,500+</div>
+            <div class="stats-label">Eggs Collected Today</div>
+          </div>
+          <div class="stats-card">
+            <div class="stats-num">4,200+</div>
+            <div class="stats-label">Hens on Pasture</div>
+          </div>
+          <div class="stats-card">
+            <div class="stats-num">240+</div>
+            <div class="stats-label">Active Kitchen Partners</div>
+          </div>
+          <div class="stats-card">
+            <div class="stats-num">100%</div>
+            <div class="stats-label">Traceable Coops</div>
+          </div>
+        </div>
       </div>
-      
-      <div style="display: flex; flex-direction: column; gap: 20px;">
-        <div class="premium-card anim-fade-left" style="display: flex; flex-wrap: wrap; align-items: center; padding: 20px;">
-          <div style="flex: 1; min-width: 200px;">
-            <h3 style="color: var(--primary-color);">Patagonia Expedition</h3>
-            <p><i class="far fa-calendar"></i> Oct 15 - Oct 25, 2026</p>
+    </section>
+
+    <!-- RESTAURANT & WHOLESALE SUPPLY HIGHLIGHTS -->
+    <section class="section section-bg" id="wholesale-highlights">
+      <div class="container">
+        <div class="section-header">
+          <h2>Partner with Feather & Yolk</h2>
+          <p>Why local food establishments, grocery chains, and hotels choose our direct delivery services.</p>
+        </div>
+        <div class="grid-3">
+          <div class="promise-card">
+            <img src="assets/cold_chain.png" alt="Refrigerated farm delivery truck" class="promise-card-img">
+            <h3>Cold Chain Integrity</h3>
+            <p>Our refrigerated fleet preserves constant temperatures of 42°F (5.5°C) from the wash station to your receiving dock. No spoilage, max shelf life.</p>
           </div>
-          <div style="flex: 1; min-width: 200px;">
-            <p><i class="fas fa-users"></i> 12/15 Slots Filled</p>
+          <div class="promise-card">
+            <img src="assets/flexible_orders.png" alt="Digital tablet showing delivery calendar" class="promise-card-img">
+            <h3>Flexible Standing Orders</h3>
+            <p>Modify your delivery quantities up to 12 hours before shipment. Adapt to seasonal menu shifts or sudden spikes in weekend covers.</p>
           </div>
-          <div style="flex: 1; text-align: right; min-width: 150px;">
-            <p class="trek-price" style="margin: 0 0 10px;">$2,200</p>
-            <a href="#" class="btn btn-primary">Book Now</a>
+          <div class="promise-card">
+            <img src="assets/direct_pricing.png" alt="Farm products with direct pricing tag" class="promise-card-img">
+            <h3>Direct Farm Pricing</h3>
+            <p>By cutting intermediate wholesale brokers, we pass on average cost savings of 15% to 20% to our partners, without compromising quality.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAMILY STORY SUMMARY -->
+    <section class="section" id="family-story-highlights">
+      <div class="container grid-2" style="align-items: center;">
+        <div class="hero-content">
+          <h2>Built on Family Heritage</h2>
+          <p style="margin-bottom: 1.5rem;">For over three generations, the Feather & Yolk family has put the health of our pastures first. We believe that soil health dictates crop quality, and pasture freedom dictates egg nutrition.</p>
+          <p style="margin-bottom: 2rem; color: var(--text-secondary);">We are fully certified for agricultural safety, biological protection, and humane flock practices. Let our farming tradition become a reliable staple in your business.</p>
+          <a href="about.html" class="btn btn-secondary" style="align-self: flex-start;">Meet the Team & Flocks</a>
+        </div>
+        <div class="hero-image-container">
+          <img src="assets/farm_hero.png" alt="Grandfather and grandson farmer showing egg baskets" style="border-radius: var(--border-radius-lg); width: 100%;">
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK INQUIRY FORM SECTION -->
+    <section class="section section-bg" id="quote-form-section">
+      <div class="container grid-2" style="align-items: center;">
+        <div>
+          <h2>Need Consistent Supply?</h2>
+          <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">Submit your commercial details, and our logistics coordinator will compile a custom contract catalog matching your volume needs.</p>
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <span style="font-size: 1.5rem;">🍳</span>
+              <span><strong>Sample Pack Available:</strong> We provide complimentary dozens for tasting tests.</span>
+            </div>
+            <div style="display: flex; gap: 0.75rem; align-items: center;">
+              <span style="font-size: 1.5rem;">📍</span>
+              <span><strong>Regional Coverage:</strong> Serving a 150-mile radius from our washing center.</span>
+            </div>
           </div>
         </div>
         
-        <div class="premium-card anim-fade-right" style="display: flex; flex-wrap: wrap; align-items: center; padding: 20px;">
-          <div style="flex: 1; min-width: 200px;">
-            <h3 style="color: var(--primary-color);">Kilimanjaro Summit</h3>
-            <p><i class="far fa-calendar"></i> Nov 05 - Nov 12, 2026</p>
-          </div>
-          <div style="flex: 1; min-width: 200px;">
-            <p><i class="fas fa-users"></i> 8/12 Slots Filled</p>
-          </div>
-          <div style="flex: 1; text-align: right; min-width: 150px;">
-            <p class="trek-price" style="margin: 0 0 10px;">$3,100</p>
-            <a href="#" class="btn btn-primary">Book Now</a>
+        <div class="form-card">
+          <!-- QUICK INQUIRY FORM -->
+          <form id="quick-inquiry-form" action="#" method="POST">
+            <h3 style="margin-bottom: 1.5rem;">Request Bulk Pricing</h3>
+            
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="quick-name">Your Name *</label>
+                <input type="text" id="quick-name" name="name" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label for="quick-business">Company / Business Name *</label>
+                <input type="text" id="quick-business" name="business" required placeholder="The Olive Restaurant">
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="quick-email">Business Email *</label>
+                <input type="email" id="quick-email" name="email" required placeholder="john@olive.com">
+              </div>
+              <div class="form-group">
+                <label for="quick-tel">Phone Number *</label>
+                <input type="tel" id="quick-tel" name="tel" required placeholder="(555) 000-0000">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="quick-product">Product Interest *</label>
+              <select id="quick-product" name="product" required>
+                <option value="">Select a product...</option>
+                <option value="eggs-pasture">Pasture-Raised Brown Eggs (Bulk)</option>
+                <option value="eggs-organic">Organic Free-Range Eggs (Bulk)</option>
+                <option value="chicken-whole">Whole Free-Range Chickens (Bulk)</option>
+                <option value="poultry-processed">Processed Poultry cuts (Bulk)</option>
+                <option value="mix">Custom Mixed Farm Order</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="quick-volume">Estimated Weekly Volume Requirements *</label>
+              <select id="quick-volume" name="volume" required>
+                <option value="">Select volume...</option>
+                <option value="low">Less than 50 dozen / 100 lbs</option>
+                <option value="medium">50 to 200 dozen / 100 to 500 lbs</option>
+                <option value="high">200 to 500 dozen / 500 to 1000 lbs</option>
+                <option value="wholesale">Over 500 dozen / 1000+ lbs</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Quote Request</button>
+          </form>
+
+          <!-- Success Wrapper -->
+          <div class="form-success-wrapper">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 style="margin-bottom: 0.5rem;">Inquiry Received!</h3>
+            <p class="success-message" style="font-size: 0.95rem;"></p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Adventure Gallery -->
-  <section class="section">
+    <!-- CLIENT CASE STUDIES -->
+    <section class="section section-bg" id="case-studies">
+      <div class="container">
+        <div class="section-header">
+          <h2>Wholesale Success Stories</h2>
+          <p>See how local culinary experts and commercial kitchens elevate their menus with Feather & Yolk pasture products.</p>
+        </div>
+        <div class="grid-2">
+          <div class="promise-card">
+            <img src="assets/bakery_story.png" alt="Bakehouse Cafe Pastries" class="promise-card-img">
+            <h3>Bakehouse Café & Pastry</h3>
+            <p><strong>"The volume is unmatched."</strong> Baker Sarah Adams switched to our pasture-raised eggs and recorded a 15% volume increase in soufflés, meringues, and sponge cakes. The sturdy shells and thick whites create incredibly stable whipping yields.</p>
+          </div>
+          <div class="promise-card">
+            <img src="assets/bistro_story.png" alt="The Green Bistro Chicken Dish" class="promise-card-img">
+            <h3>The Green Bistro</h3>
+            <p><strong>"Traceability is our menu's highlight."</strong> Chef Marcus Dubois features our pasture chicken breast on his menu, highlighting the exact coop block. Customers appreciate the clean, antibiotic-free poultry and robust pasture flavor profile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DELIVERY ZONES AND LEAD TIMES -->
+    <section class="section" id="dispatch-zones">
+      <div class="container grid-2" style="align-items: center;">
+        <div class="hero-content">
+          <h2>Wholesale Delivery Zones</h2>
+          <p style="margin-bottom: 1.5rem;">We operate a dedicated refrigerated fleet to service B2B partners. Review our regional shipping corridors and lead times below:</p>
+          <ul class="text-start" style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">📍</span>
+              <div>
+                <strong>North Zone (Mondays & Thursdays):</strong> Delivering to Metro Valley, Riverdale, and Northwood suburbs. Order cut-off: Friday 5:00 PM.
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">📍</span>
+              <div>
+                <strong>South Zone (Tuesdays & Fridays):</strong> Delivering to Bayshore, Southgate Industrial Park, and coastal kitchens. Order cut-off: Monday 5:00 PM.
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">📍</span>
+              <div>
+                <strong>Urgent Dispatch (Standing Orders):</strong> Standing orders receive priority routing and 12-hour adjustment options before delivery.
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-image-container">
+          <img src="assets/cold_chain.png" alt="Refrigerated wholesale delivery fleet loading at our washing center" style="border-radius: var(--border-radius-lg); width: 100%;">
+        </div>
+      </div>
+    </section>
+
+  <!-- FOOTER -->
+  <footer>
     <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Adventure Gallery</h2>
-      </div>
-      <div class="gallery-grid">
-        <div class="gallery-item anim-zoom-in"><img src="images/gallery/gallery_1.png" alt="Gallery"></div>
-        <div class="gallery-item anim-zoom-in" style="transition-delay: 0.1s"><img src="images/gallery/gallery_2.png" alt="Gallery"></div>
-        <div class="gallery-item anim-zoom-in" style="transition-delay: 0.2s"><img src="images/treks/rocky.png" alt="Gallery"></div>
-        <div class="gallery-item anim-zoom-in" style="transition-delay: 0.3s"><img src="images/blog/swiss_alps.png" alt="Gallery"></div>
-        <div class="gallery-item anim-zoom-in" style="transition-delay: 0.4s"><img src="images/treks/everest.png" alt="Gallery"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section" style="background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: #FFF; text-align: center;">
-    <div class="container anim-zoom-in">
-      <h2>Ready For Your Next Adventure?</h2>
-      <p style="margin: 20px 0 40px;">Contact us today and let's plan the trip of a lifetime.</p>
-      <a href="contact.html" class="btn btn-primary glass-effect">Get In Touch</a>
-    </div>
-  </section>
-
-  <!-- Travel Tips Section -->
-  <section class="section" style="background: var(--surface-color);">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Beginner Trekking Tips</h2>
-        <p class="section-subtitle">Must-know advice for your first multi-day expedition.</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-        <div class="premium-card anim-zoom-in">
-          <div class="card-img-wrapper">
-            <img src="images/tips/hydration_basics.png" alt="Hydration Basics">
-          </div>
-          <div class="card-content">
-            <h3>Hydration Basics</h3>
-            <p style="color: var(--text-light);">How to purify water and stay safely hydrated on the trail.</p>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; text-decoration: none; color: var(--primary);">
+            <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain;">
+            <h3 style="margin: 0;">Feather & Yolk Farm</h3>
+          </a>
+          <p>Bringing nature's finest pasture eggs and sustainable poultry from our fields directly to your table. Healthy, ethical, and delicious.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
           </div>
         </div>
-        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
-          <div class="card-img-wrapper">
-            <img src="images/tips/footwear_fit.png" alt="Footwear Fit">
-          </div>
-          <div class="card-content">
-            <h3>Footwear Fit</h3>
-            <p style="color: var(--text-light);">Avoid blisters by choosing and breaking in the right boots.</p>
-          </div>
+        <div class="footer-links-col">
+          <h4>Farm Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Wholesale Hub</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="tours.html">Book a Tour</a></li>
+          </ul>
         </div>
-        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
-          <div class="card-img-wrapper">
-            <img src="images/tips/navigation_101.png" alt="Navigation 101">
-          </div>
-          <div class="card-content">
-            <h3>Navigation 101</h3>
-            <p style="color: var(--text-light);">Why you still need a physical map and compass in the GPS era.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Latest Blog Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Latest Adventure News</h2>
-      </div>
-      <div class="blog-grid">
-        <div class="blog-card anim-fade-right">
-          <img src="images/blog/winter_gear.jpg" alt="Blog post thumbnail">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">July 10, 2026</span>
-          <h3 style="margin: 10px 0;">Essential Gear for Winter Treks</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">Don't let the cold stop you. Here is the ultimate packing list to stay warm and safe during your snowy expeditions.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="blog-card anim-fade-left">
-          <img src="images/blog/hiking_boots.jpg" alt="Blog post thumbnail">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">July 02, 2026</span>
-          <h3 style="margin: 10px 0;">The Best Hiking Boots of 2026</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">We tested over 50 pairs of boots across various terrains. Find out which ones offer the best comfort and durability.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
-          <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Quick Links</h4>
+        <div class="footer-links-col">
+          <h4>Company</h4>
           <ul class="footer-links">
             <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="packages.html">Trek Packages</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="quality.html">Quality Standards</a></li>
+            <li><a href="contact.html">Support & FAQ</a></li>
+            <li><a href="bulk.html">Partnership Program</a></li>
           </ul>
         </div>
-        
-        <div class="footer-col">
-          <h4>Adventures</h4>
-          <ul class="footer-links">
-            <li><a href="#">Mountain Trekking</a></li>
-            <li><a href="#">Forest Trails</a></li>
-            <li><a href="#">Snow Expeditions</a></li>
-            <li><a href="#">Camping</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Contact Info</h4>
-          <ul class="footer-links">
-            <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Ave, NY 10001</li>
-            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
-            <li><i class="fas fa-envelope"></i> info@trekX.com</li>
-          </ul>
+        <div class="footer-contact-col">
+          <h4>Contact the Coop</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+1 (555) 374-3447 (EGG-EGGS)</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>fresh@featherandyolkfarm.local</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>4200 Pasture Lane, Farmville, FV 84321</span>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="bottom-footer">
-        <p>&copy; 2026 Trekking & Hiking Tour Company. All Rights Reserved.</p>
-        <div class="bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-        </div>
+      <div class="footer-bottom">
+        <span>© 2026 Feather & Yolk Farm. All Rights Reserved. Coops Certified Organic.</span>
+        <span>Designed with 💚 for Sustainable Agriculture</span>
       </div>
     </div>
   </footer>
 
-  <button id="back-to-top" class="back-to-top"><i class="fas fa-chevron-up"></i></button>
-
   <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
 </body>
 </html>

@@ -1,418 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Trekking & Hiking Tour Company</title>
-  <meta name="description"
-    content="Learn about TrekX, our experienced guides, and our mission to provide the best hiking adventures.">
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <title>About Us & Sustainable Practices | Feather & Yolk Farm</title>
+  <meta name="description" content="Discover the history of Feather & Yolk Farm. Learn about our cage-free, pasture-raised animal welfare standards and meet our dedicated family team.">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    .page-hero {
-      height: 60vh;
-      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero/hero-1.png') center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #FFF;
-    }
-
-    .timeline {
-      position: relative;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .timeline::after {
-      content: '';
-      position: absolute;
-      width: 4px;
-      background-color: var(--primary-color);
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      margin-left: -2px;
-    }
-
-    .timeline-item {
-      padding: 20px 40px;
-      position: relative;
-      width: 50%;
-    }
-
-    .timeline-item::after {
-      content: '';
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      right: -10px;
-      background-color: var(--accent-color);
-      border: 4px solid var(--surface-color);
-      top: 25px;
-      border-radius: 50%;
-      z-index: 1;
-    }
-
-    .left {
-      left: 0;
-    }
-
-    .right {
-      left: 50%;
-    }
-
-    .right::after {
-      left: -10px;
-    }
-
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-
-    .team-member {
-      text-align: center;
-    }
-
-    .team-member img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 20px;
-      border: 5px solid var(--primary-color);
-    }
-
-    .partners-grid {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      flex-wrap: wrap;
-    }
-
-    .partners-grid i {
-      font-size: 4rem;
-      color: var(--text-light);
-      opacity: 0.6;
-      transition: color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    .partners-grid i:hover {
-      opacity: 1;
-      transform: scale(1.1);
-    }
-
-    .partners-grid .fa-aws:hover {
-      color: #FF9900;
-    }
-
-    .partners-grid .fa-apple:hover {
-      color: #111111;
-    }
-
-    .dark-mode .partners-grid .fa-apple:hover {
-      color: #FFFFFF;
-    }
-
-    .partners-grid .fa-google:hover {
-      color: #4285F4;
-    }
-
-    .partners-grid .fa-airbnb:hover {
-      color: #FF5A5F;
-    }
-
-    @media (max-width: 768px) {
-      .timeline::after {
-        left: 31px;
-      }
-
-      .timeline-item {
-        width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
-      }
-
-      .left::after,
-      .right::after {
-        left: 21px;
-      }
-
-      .right {
-        left: 0;
-      }
-    }
-  </style>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
-
 <body>
-  <!-- Header placeholder -->
-  <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
-    <div class="container">
-      <a href="index.html" class="logo" style="color: var(--text-color);"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
-      <nav class="nav-menu">
-        <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
-        <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
-        <a href="about.html" class="nav-link active" style="color: var(--text-color);">About Us</a>
-        <a href="services.html" class="nav-link" style="color: var(--text-color);">Services</a>
-        <a href="packages.html" class="nav-link" style="color: var(--text-color);">Packages</a>
-        <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
-        <a href="contact.html" class="nav-link" style="color: var(--text-color);">Contact</a>
-        <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
-        <div class="mobile-nav-controls">
-          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+
+  <!-- MOBILE SLIDE-IN MENU -->
+  <div class="mobile-overlay"></div>
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="logo">
+        <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain; margin-right: 8px;">
+        <span>Feather & Yolk Farm</span>
+      </a>
+      <button class="mobile-nav-close btn-icon" aria-label="Close Mobile Menu">✕</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="home2.html" class="mobile-nav-link">Wholesale (Home 2)</a></li>
+      <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+      <li><a href="tours.html" class="mobile-nav-link">Farm Tours</a></li>
+      <li><a href="bulk.html" class="mobile-nav-link">Bulk Orders</a></li>
+      <li><a href="about.html" class="mobile-nav-link active">About Our Farm</a></li>
+      <li><a href="quality.html" class="mobile-nav-link">Freshness & Quality</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-cta">
+      <h5>Order Fresh Eggs Today</h5>
+      <p style="font-size: 0.85rem; margin-bottom: 1rem;">Direct delivery to your doorstep within 24 hours.</p>
+      <a href="products.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Shop Products</a>
+    </div>
+  </nav>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain; margin-right: 8px;">
+        <span>Feather & Yolk Farm</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="tours.html" class="nav-link">Farm Tours</a></li>
+        <li><a href="bulk.html" class="nav-link">Bulk Orders</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="quality.html" class="nav-link">Quality</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" aria-label="Toggle Theme"></button>
+        <div class="direction-toggle" aria-label="Toggle Layout Direction">
+          <button type="button" class="dir-btn ltr-btn active" data-dir="ltr">LTR</button>
+          <button type="button" class="dir-btn rtl-btn" data-dir="rtl">RTL</button>
+          <span class="dir-slider"></span>
         </div>
-      </nav>
-      <div class="controls">
-        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);"
-          aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL"
-          style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);"
-          aria-label="Toggle RTL Layout">RTL</button>
-        <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i
-            class="fas fa-bars"></i></button>
+        <button class="hamburger" aria-label="Open Mobile Menu">☰</button>
       </div>
     </div>
   </header>
 
-  <section class="page-hero parallax">
-    <div class="container anim-zoom-in">
-      <h1 style="font-size: 3.5rem;">Our Story</h1>
-      <p>Discover the passion behind our premium adventures.</p>
-    </div>
-  </section>
-
-  <!-- Company Story -->
-  <section class="section">
-    <div class="container">
-      <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
-        <div style="flex: 1; min-width: 300px; max-width: 550px;" class="anim-fade-right">
-          <img src="images/hero/hero-2.png" alt="Our Story"
-            style="border-radius: 20px; box-shadow: var(--shadow-lg); width: 100%; max-height: 360px; object-fit: cover;">
+  <main>
+    <!-- ABOUT HERO -->
+    <section class="hero" id="about-hero">
+      <div class="container grid-2">
+        <div class="hero-content">
+          <div class="badge"><span>🌱 Family Legacy</span></div>
+          <h1 class="hero-title">Nurturing Fields, <span>Ethical Flocks</span></h1>
+          <p class="hero-subtitle">Learn the history of our pasture egg farm. We combine generations of traditional husbandry with modern ecological sciences to yield superior farm products.</p>
+          <div class="hero-actions">
+            <a href="#farm-story" class="btn btn-primary">Read Our Story</a>
+            <a href="#practices" class="btn btn-secondary">Our Farming Practices</a>
+          </div>
         </div>
-        <div style="flex: 1; min-width: 300px;" class="anim-fade-left">
-          <h2 class="section-title">The Journey Began In 2001</h2>
-          <p style="margin-bottom: 20px; color: var(--text-light);">What started as a small group of enthusiastic hikers
-            has evolved into the world's leading premium trekking company. We've spent the last two decades exploring
-            uncharted territories to bring you the best experiences.</p>
-          <p style="color: var(--text-light);">We believe that the mountains have the power to transform lives. Our
-            mission is to provide safe, exhilarating, and sustainable travel experiences.</p>
+        <div class="hero-image-container">
+          <div class="hero-image-backdrop"></div>
+          <img src="assets/about_hero.png" alt="Sunrise view over green pastures and chicken coops" class="hero-img">
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Timeline -->
-  <section class="section" style="background: var(--surface-color);">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Our Milestone Journey</h2>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item left anim-fade-right">
-          <div class="premium-card">
-            <div class="card-content">
-              <h3 style="color: var(--accent-color);">2001</h3>
-              <p>Company Founded in Colorado.</p>
+    <!-- FARM STORY TIMELINE -->
+    <section class="section section-bg" id="farm-story">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Farm Story</h2>
+          <p>Tracing our journey from a small three-acre pasture coop to a community staple.</p>
+        </div>
+        
+        <div class="timeline" style="display: flex; flex-direction: column;">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>1994 - The First Coop</h4>
+              <p>Arthur Vance purchases 5 acres in Farmville. Armed with 50 Rhode Island Red hens, he begins selling fresh backyard eggs to neighbors from a folding table.</p>
             </div>
           </div>
-        </div>
-        <div class="timeline-item right anim-fade-left">
-          <div class="premium-card">
-            <div class="card-content">
-              <h3 style="color: var(--accent-color);">2010</h3>
-              <p>Expanded to the Himalayas.</p>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>2005 - Pasture Expansion</h4>
+              <p>Feather & Yolk expands to 40 acres, establishing rotated pasture systems where chickens run cage-free and play vital roles in soil regeneration cycles.</p>
             </div>
           </div>
-        </div>
-        <div class="timeline-item left anim-fade-right">
-          <div class="premium-card">
-            <div class="card-content">
-              <h3 style="color: var(--accent-color);">2018</h3>
-              <p>Voted #1 Premium Adventure Co.</p>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>2015 - Sustainable Tech</h4>
+              <p>Arthur's daughter Clara takes leadership. She installs state-of-the-art solar panels for the washing facilities and sets up a computerized temperature monitoring grid.</p>
             </div>
           </div>
-        </div>
-        <div class="timeline-item right anim-fade-left">
-          <div class="premium-card">
-            <div class="card-content">
-              <h3 style="color: var(--accent-color);">2026</h3>
-              <p>Reaching 100k+ Happy Hikers.</p>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>2026 - Direct Sales Leader</h4>
+              <p>Operating a refrigerated logistics fleet delivering farm-to-table products directly to local homes, catering partners, and high-end organic grocers.</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Meet The Team -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Meet Our Experts</h2>
-      </div>
-      <div class="team-grid">
-        <div class="team-member anim-zoom-in">
-          <img src="https://i.pinimg.com/1200x/ae/9b/d1/ae9bd1fe69b17a3360728e27fcc1bd6c.jpg" alt="Team">
-          <h3>John Doe</h3>
-          <p class="trek-price" style="font-size: 1rem; margin-top: 0;">Lead Guide</p>
+    <!-- FARMING PRACTICES & WELFARE -->
+    <section class="section" id="practices">
+      <div class="container">
+        <div class="section-header">
+          <h2>Regenerative Farming Practices</h2>
+          <p>Our farming techniques improve soil biology, sequester carbon, and guarantee top quality animal welfare standards.</p>
         </div>
-        <div class="team-member anim-zoom-in" style="transition-delay: 0.2s">
-          <img src="https://i.pinimg.com/236x/da/76/21/da76213b9a0a33d167f9544c49fb0712.jpg" alt="Team">
-          <h3>Sarah Smith</h3>
-          <p class="trek-price" style="font-size: 1rem; margin-top: 0;">Expedition Coordinator</p>
-        </div>
-        <div class="team-member anim-zoom-in" style="transition-delay: 0.4s">
-          <img src="https://i.pinimg.com/736x/0a/fb/f8/0afbf860a69fc586d19ffa698cdd7749.jpg" alt="Team">
-          <h3>Mike Johnson</h3>
-          <p class="trek-price" style="font-size: 1rem; margin-top: 0;">Safety Officer</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Partners -->
-  <section class="section" style="background: var(--surface-color);">
-    <div class="container text-center anim-fade-up">
-      <h2 class="section-title">Our Global Partners</h2>
-      <div class="partners-grid" style="margin-top: 40px;">
-        <i class="fab fa-aws"></i>
-        <i class="fab fa-apple"></i>
-        <i class="fab fa-google"></i>
-        <i class="fab fa-airbnb"></i>
-      </div>
-    </div>
-  </section>
-
-  <!-- Travel Tips Section -->
-  <section class="section" style="background: var(--surface-color);">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Ethical Trekking</h2>
-        <p class="section-subtitle">How we preserve the mountains for future generations.</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-        <div class="premium-card anim-zoom-in">
-          <div class="card-content">
-            <i class="fas fa-leaf" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>Leave No Trace</h3>
-            <p style="color: var(--text-light);">Our strict policy on waste management and minimizing footprint.</p>
+        
+        <div class="grid-2" style="margin-bottom: 4.5rem; align-items: center;">
+          <div>
+            <h3 style="margin-bottom: 1rem;">Pasture Rotation Protocols</h3>
+            <p style="margin-bottom: 1.5rem; color: var(--text-secondary);">We do not keep chickens in static yards where soil quickly degrades. Instead, we rotate our coops to fresh pasture quadrants every week.</p>
+            <p style="color: var(--text-secondary);">This allows the plants to recover, fertilizes the topsoil naturally with manure, and provides our chickens with a rich supply of fresh weeds, clover, and pasture insects.</p>
           </div>
-        </div>
-        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
-          <div class="card-content">
-            <i class="fas fa-hands-helping"
-              style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>Support Local</h3>
-            <p style="color: var(--text-light);">Empowering local communities through fair wages and ethical hiring.</p>
-          </div>
-        </div>
-        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
-          <div class="card-content">
-            <i class="fas fa-paw" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>Wildlife Respect</h3>
-            <p style="color: var(--text-light);">Guidelines on observing native fauna safely and respectfully.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Latest Blog Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Latest Adventure News</h2>
-      </div>
-      <div class="blog-grid">
-        <div class="blog-card anim-fade-right">
-          <img src="images/blog/our_story.jpg" alt="Blog post thumbnail">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">August 05, 2026</span>
-          <h3 style="margin: 10px 0;">How TrekX Started: Our Story</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">A look back at how a small group of passionate
-            hikers built a premium global adventure tour company.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i
-              class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="blog-card anim-fade-left">
-          <img src="images/blog/veteran_guides.jpg" alt="Blog post thumbnail">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">July 22, 2026</span>
-          <h3 style="margin: 10px 0;">Meet Our Veteran Guides</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">Get to know the experts who will be leading you
-            safely across the toughest trails on the planet.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i
-              class="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
-          <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and
-            luxurious outdoor adventures worldwide.</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+          <div class="hero-image-container">
+            <img src="assets/regenerative_pastures.png" alt="Rotated pasture fields with mobile coops" style="border-radius: var(--border-radius-lg); width: 100%;">
           </div>
         </div>
 
-        <div class="footer-col">
-          <h4>Quick Links</h4>
+        <div class="grid-2" style="align-items: center;">
+          <div class="hero-image-container">
+            <img src="assets/animal_welfare.png" alt="Free-range hens in a clean sunlit barn" style="border-radius: var(--border-radius-lg); width: 100%; order: 2;">
+          </div>
+          <div>
+            <h3 style="margin-bottom: 1rem;">Animal Welfare Standards</h3>
+            <p style="margin-bottom: 1.25rem; color: var(--text-secondary);">We are certified humane by international organizations. Our coops are spacious, clean, and filled with natural daylight.</p>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li style="display: flex; gap: 0.5rem; align-items: center;">
+                <span style="color: var(--primary);">✔</span>
+                <span>Minimum 108 sq. feet of pasture space per bird.</span>
+              </li>
+              <li style="display: flex; gap: 0.5rem; align-items: center;">
+                <span style="color: var(--primary);">✔</span>
+                <span>Nesting boxes lined with organic pine shavings.</span>
+              </li>
+              <li style="display: flex; gap: 0.5rem; align-items: center;">
+                <span style="color: var(--primary);">✔</span>
+                <span>Protected dust bath zones to encourage natural cleaning behaviors.</span>
+              </li>
+              <li style="display: flex; gap: 0.5rem; align-items: center;">
+                <span style="color: var(--primary);">✔</span>
+                <span>Zero beak trimming or artificial lighting schedules.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MEET THE TEAM -->
+    <section class="section section-bg" id="team-members">
+      <div class="container">
+        <div class="section-header">
+          <h2>Meet the Farm Team</h2>
+          <p>The dedicated crew ensuring your eggs are clean, fresh, and delivered on schedule.</p>
+        </div>
+        <div class="grid-3">
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="assets/team_founder.png" alt="Arthur Vance, Founder" style="object-position: center;">
+            </div>
+            <div class="team-info">
+              <h4>Arthur Vance</h4>
+              <span>Founder & Flock Elder</span>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="assets/team_manager.png" alt="Clara Vance, General Manager" style="object-position: center;">
+            </div>
+            <div class="team-info">
+              <h4>Clara Vance</h4>
+              <span>General Manager & Scientist</span>
+            </div>
+          </div>
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="assets/team_logistics.png" alt="Marcus Thompson, Delivery Chief" style="object-position: center;">
+            </div>
+            <div class="team-info">
+              <h4>Marcus Thompson</h4>
+              <span>Logistics & Fleet Chief</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <!-- FLOCK HERITAGE BREEDS -->
+    <section class="section section-bg" id="flock-breeds">
+      <div class="container">
+        <div class="section-header">
+          <h2>Flock Heritage Breeds</h2>
+          <p>We select premium heritage breeds suited for outdoor grazing liberty and top quality product flavor profiles.</p>
+        </div>
+        <div class="grid-3">
+          <div class="promise-card">
+            <img src="assets/organic_diet.png" alt="Rhode Island Red chicken in pasture field" class="promise-card-img">
+            <h3>Rhode Island Reds</h3>
+            <p>Our core egg-laying breed, highly active and suited for outdoor foraging, yielding large, sturdy brown eggs with deep yolks.</p>
+          </div>
+          <div class="promise-card">
+            <img src="assets/fresh_poultry.png" alt="Cornish Cross birds in grass run mobile coop" class="promise-card-img">
+            <h3>Cornish Cross</h3>
+            <p>Our poultry meat breed, raised in rotating pasture hoop runs, developing lean, muscular tissue and excellent flavor.</p>
+          </div>
+          <div class="promise-card">
+            <img src="assets/duck_eggs.png" alt="Pekin ducks swimming in pond pasture" class="promise-card-img">
+            <h3>Pekin Ducks</h3>
+            <p>Hardy foragers raising duck eggs on pond margins, yielding rich fats prized by pastry chefs for premium baking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARBON FOOTPRINT SOIL METRICS -->
+    <section class="section" id="carbon-metrics">
+      <div class="container grid-2" style="align-items: center;">
+        <div class="hero-content">
+          <h2>Regenerative Carbon Farming</h2>
+          <p style="margin-bottom: 1.5rem;">Rotational grazing is a powerful tool to fight soil degradation. Here is how our pasture cycle captures carbon and enriches biology:</p>
+          <ul class="text-start" style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">✓</span>
+              <div>
+                <strong>Natural Nitrogen Cycles:</strong> Chicken droppings fertilize soils, eliminating any need for synthetic chemical sprays.
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">✓</span>
+              <div>
+                <strong>Soil Organic Carbon:</strong> Pasture recovery intervals increase soil biological matter by 1.2% annually, sequestering carbon.
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">✓</span>
+              <div>
+                <strong>Solar Wash Station:</strong> Our egg grading and fleet dispatch hubs operate on 100% solar offset panels.
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="hero-image-container">
+          <img src="assets/animal_welfare.png" alt="Sun rays hitting lush pasture grass rotated paddocks" style="border-radius: var(--border-radius-lg); width: 100%;">
+        </div>
+      </div>
+    </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; text-decoration: none; color: var(--primary);">
+            <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain;">
+            <h3 style="margin: 0;">Feather & Yolk Farm</h3>
+          </a>
+          <p>Bringing nature's finest pasture eggs and sustainable poultry from our fields directly to your table. Healthy, ethical, and delicious.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-col">
+          <h4>Farm Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Wholesale Hub</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="tours.html">Book a Tour</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
           <ul class="footer-links">
             <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="packages.html">Trek Packages</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="quality.html">Quality Standards</a></li>
+            <li><a href="contact.html">Support & FAQ</a></li>
+            <li><a href="bulk.html">Partnership Program</a></li>
           </ul>
         </div>
-
-        <div class="footer-col">
-          <h4>Adventures</h4>
-          <ul class="footer-links">
-            <li><a href="#">Mountain Trekking</a></li>
-            <li><a href="#">Forest Trails</a></li>
-            <li><a href="#">Snow Expeditions</a></li>
-            <li><a href="#">Camping</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Contact Info</h4>
-          <ul class="footer-links">
-            <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Ave, NY 10001</li>
-            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
-            <li><i class="fas fa-envelope"></i> info@trekX.com</li>
-          </ul>
+        <div class="footer-contact-col">
+          <h4>Contact the Coop</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+1 (555) 374-3447 (EGG-EGGS)</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>fresh@featherandyolkfarm.local</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>4200 Pasture Lane, Farmville, FV 84321</span>
+            </div>
+          </div>
         </div>
       </div>
-
-      <div class="bottom-footer">
-        <p>&copy; 2026 Trekking & Hiking Tour Company. All Rights Reserved.</p>
-        <div class="bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-        </div>
+      <div class="footer-bottom">
+        <span>© 2026 Feather & Yolk Farm. All Rights Reserved. Coops Certified Organic.</span>
+        <span>Designed with 💚 for Sustainable Agriculture</span>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
 </body>
-
 </html>

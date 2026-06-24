@@ -3,370 +3,367 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Trekking & Hiking Tour Company</title>
-  <meta name="description" content="Get in touch with TrekX for inquiries, bookings, or support regarding our hiking tours.">
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <title>Contact the Coop & FAQs | Feather & Yolk Farm</title>
+  <meta name="description" content="Get in touch with Feather & Yolk Farm. Find our phone number, business email, location map, operating hours, and comprehensive answers to FAQs.">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/responsive.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    .page-hero {
-      height: 60vh;
-      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero/hero-3.png') center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: #FFF;
-    }
-    
-    .contact-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 50px;
-    }
-    
-    .contact-form-box {
-      flex: 2;
-      background: var(--surface-color);
-      padding: 40px;
-      border-radius: 20px;
-    }
-    
-    .contact-info-box {
-      flex: 1;
-      min-width: 300px;
-    }
-    
-    .info-item {
-      display: flex;
-      align-items: flex-start;
-      margin-bottom: 30px;
-    }
-    
-    .info-item i {
-      font-size: 2rem;
-      color: var(--accent-color);
-      margin-right: 20px;
-      margin-top: 5px;
-    }
-    
-    .info-item h4 {
-      margin-bottom: 5px;
-    }
-    
-    .map-container {
-      width: 100%;
-      height: 400px;
-      border-radius: 20px;
-      overflow: hidden;
-      margin-top: 50px;
-      background: #ccc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    
-    .faq-item {
-      margin-bottom: 20px;
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 20px;
-    }
-    
-    .faq-item h4 {
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      color: var(--primary-color);
-    }
-    
-    .dark-mode .faq-item h4 {
-      color: var(--accent-color);
-    }
-    
-    .faq-item p {
-      max-height: 0;
-      overflow: hidden;
-      margin-top: 0;
-      color: var(--text-light);
-      transition: all 0.3s ease;
-    }
-    
-    .faq-item.active p {
-      max-height: 200px;
-      margin-top: 10px;
-    }
-    
-    .faq-item h4 i {
-      transition: transform 0.3s ease;
-    }
-    
-    .faq-item.active h4 i {
-      transform: rotate(180deg);
-    }
-    
-    .social-icon-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      background: var(--surface-color);
-      border: 1px solid var(--border-color);
-      color: var(--text-color);
-      font-size: 1.2rem;
-      transition: all var(--transition-smooth);
-      box-shadow: var(--shadow-sm);
-    }
-    
-    .social-icon-btn:hover {
-      background: var(--primary-color);
-      color: #FFF;
-      border-color: var(--primary-color);
-      transform: translateY(-3px);
-      box-shadow: var(--shadow-md);
-    }
-  </style>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 </head>
 <body>
-  <header class="header sticky" style="background-color: var(--header-bg); padding: 15px 0;">
-    <div class="container">
-      <a href="index.html" class="logo" style="color: var(--text-color);"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
-      <nav class="nav-menu">
-        <a href="index.html" class="nav-link" style="color: var(--text-color);">Home</a>
-        <a href="home2.html" class="nav-link" style="color: var(--text-color);">Home 2</a>
-        <a href="about.html" class="nav-link" style="color: var(--text-color);">About Us</a>
-        <a href="services.html" class="nav-link" style="color: var(--text-color);">Services</a>
-        <a href="packages.html" class="nav-link" style="color: var(--text-color);">Packages</a>
-        <a href="gallery.html" class="nav-link" style="color: var(--text-color);">Gallery</a>
-        <a href="contact.html" class="nav-link active" style="color: var(--text-color);">Contact</a>
-        <a href="signup.html" class="nav-link" style="color: var(--text-color);">Sign Up</a>
-        <div class="mobile-nav-controls">
-          <button class="icon-btn theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-          <button class="icon-btn rtl-toggle-btn" title="Toggle RTL" style="font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
+
+  <!-- MOBILE SLIDE-IN MENU -->
+  <div class="mobile-overlay"></div>
+  <nav class="mobile-nav" aria-label="Mobile Navigation">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="logo">
+        <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain; margin-right: 8px;">
+        <span>Feather & Yolk Farm</span>
+      </a>
+      <button class="mobile-nav-close btn-icon" aria-label="Close Mobile Menu">✕</button>
+    </div>
+    <ul class="mobile-menu-links">
+      <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+      <li><a href="home2.html" class="mobile-nav-link">Wholesale (Home 2)</a></li>
+      <li><a href="products.html" class="mobile-nav-link">Products</a></li>
+      <li><a href="tours.html" class="mobile-nav-link">Farm Tours</a></li>
+      <li><a href="bulk.html" class="mobile-nav-link">Bulk Orders</a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Our Farm</a></li>
+      <li><a href="quality.html" class="mobile-nav-link">Freshness & Quality</a></li>
+      <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-cta">
+      <h5>Order Fresh Eggs Today</h5>
+      <p style="font-size: 0.85rem; margin-bottom: 1rem;">Direct delivery to your doorstep within 24 hours.</p>
+      <a href="products.html" class="btn btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Shop Products</a>
+    </div>
+  </nav>
+
+  <!-- MAIN NAVIGATION HEADER -->
+  <header>
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain; margin-right: 8px;">
+        <span>Feather & Yolk Farm</span>
+      </a>
+      
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="home2.html" class="nav-link">Home 2</a></li>
+        <li><a href="products.html" class="nav-link">Products</a></li>
+        <li><a href="tours.html" class="nav-link">Farm Tours</a></li>
+        <li><a href="bulk.html" class="nav-link">Bulk Orders</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="quality.html" class="nav-link">Quality</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+
+      <div class="nav-controls">
+        <button class="theme-toggle" aria-label="Toggle Theme"></button>
+        <div class="direction-toggle" aria-label="Toggle Layout Direction">
+          <button type="button" class="dir-btn ltr-btn active" data-dir="ltr">LTR</button>
+          <button type="button" class="dir-btn rtl-btn" data-dir="rtl">RTL</button>
+          <span class="dir-slider"></span>
         </div>
-      </nav>
-      <div class="controls">
-        <button class="icon-btn theme-toggle-btn" id="theme-toggle" style="color: var(--text-color);" aria-label="Toggle Dark/Light Mode"><i class="fas fa-moon"></i></button>
-        <button class="icon-btn rtl-toggle-btn" id="rtl-toggle" title="Toggle RTL" style="color: var(--text-color); font-size: 0.9rem; font-weight: 700; font-family: var(--font-text);" aria-label="Toggle RTL Layout">RTL</button>
-        <button class="mobile-toggle" style="color: var(--text-color);" aria-label="Open Mobile Menu"><i class="fas fa-bars"></i></button>
+        <button class="hamburger" aria-label="Open Mobile Menu">☰</button>
       </div>
     </div>
   </header>
 
-  <section class="page-hero parallax">
-    <div class="container anim-zoom-in">
-      <h1 style="font-size: 3.5rem;">Get In Touch</h1>
-      <p>We're here to help you plan your next big adventure.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="contact-wrapper">
-        <div class="contact-form-box anim-fade-right">
-          <h2 class="section-title">Send A Message</h2>
-          <form>
-            <div style="display: flex; gap: 20px;">
-              <div class="form-group" style="flex:1;">
-                <input type="text" class="form-control" placeholder="Your Name" required>
-              </div>
-              <div class="form-group" style="flex:1;">
-                <input type="email" class="form-control" placeholder="Your Email" required>
-              </div>
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject">
-            </div>
-            <div class="form-group">
-              <textarea class="form-control" rows="6" placeholder="Your Message" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-          </form>
+  <main>
+    <!-- CONTACT HEADER -->
+    <section class="section" style="padding-bottom: 0;">
+      <div class="container">
+        <div class="section-header" style="margin-bottom: 3.5rem;">
+          <div class="badge" style="align-self: center;"><span>📞 Get In Touch</span></div>
+          <h2>Contact the Farm</h2>
+          <p>Have questions about delivery zones, product batches, or tour reservations? Reach out, and we'll reply shortly.</p>
         </div>
-        
-        <div class="contact-info-box anim-fade-left">
-          <h2 class="section-title">Contact Info</h2>
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <div>
-              <h4>Office Location</h4>
-              <p>123 Adventure Ave, New York, NY 10001</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-phone-alt"></i>
-            <div>
-              <h4>Phone Number</h4>
-              <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-envelope"></i>
-            <div>
-              <h4>Email Address</h4>
-              <p>info@trekX.com<br>support@trekX.com</p>
-            </div>
-          </div>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS & FORM -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container grid-2" style="align-items: flex-start;">
+        <!-- Contact Details -->
+        <div>
+          <h3 style="margin-bottom: 1.5rem;">Contact Information</h3>
+          <p style="margin-bottom: 2rem;">Stop by our farm store or call us during retail hours. We're happy to hold orders for local pickup.</p>
           
-          <div style="margin-top: 40px;">
-            <h4 style="margin-bottom: 15px;">Follow Our Journey</h4>
-            <div style="display: flex; gap: 15px;">
-              <a href="#" class="social-icon-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social-icon-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="social-icon-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-icon-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-              <a href="#" class="social-icon-btn" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+          <div class="text-start" style="display: flex; flex-direction: column; gap: 1.5rem; margin-bottom: 2.5rem;">
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <span style="font-size: 1.5rem; color: var(--primary);">📞</span>
+              <div>
+                <strong>Phone Support</strong>
+                <p style="font-size: 0.95rem;">+1 (555) 374-3447 (EGG-EGGS)</p>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">Direct line to flock status and retail store managers.</p>
+              </div>
+            </div>
+            
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <span style="font-size: 1.5rem; color: var(--primary);">✉</span>
+              <div>
+                <strong>Email Address</strong>
+                <p style="font-size: 0.95rem;">fresh@featherandyolkfarm.local</p>
+                <p style="font-size: 0.85rem; color: var(--text-secondary);">For custom purchase quotes or catering logistics.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+              <span style="font-size: 1.5rem; color: var(--primary);">🕒</span>
+              <div>
+                <strong>Farm Store Operating Hours</strong>
+                <p style="font-size: 0.95rem;">Monday - Friday: 8:00 AM - 5:00 PM</p>
+                <p style="font-size: 0.95rem;">Saturday: 9:00 AM - 3:00 PM</p>
+                <p style="font-size: 0.95rem; color: var(--accent-brown); font-weight: 600;">Sunday: Closed for pasture rest</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="background-color: var(--primary-light); padding: 1.5rem; border-radius: var(--border-radius-md); border: 1px solid var(--border-color); margin-bottom: 2.5rem;">
+            <h4 style="color: var(--primary); margin-bottom: 0.5rem; font-family: var(--font-sans); font-weight: 700;">📍 Local Pickups</h4>
+            <p style="font-size: 0.9rem; color: var(--text-primary);">Select "Local Pickup" during checkout to collect your items from our packing facility lockers, accessible 24/7 with your security pin code.</p>
+          </div>
+
+          <div>
+            <h4 style="margin-bottom: 1rem;">Follow Our Flock</h4>
+            <div style="display: flex; gap: 1rem;">
+              <a href="#" class="btn-icon" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: currentColor;"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="btn-icon" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2;"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+              </a>
+              <a href="#" class="btn-icon" aria-label="Twitter">
+                <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; fill: currentColor;"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="form-card">
+          <form id="contact-form" action="#" method="POST">
+            <h3 style="margin-bottom: 1.5rem;">Send a Message</h3>
+            
+            <div class="form-group">
+              <label for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" name="name" required placeholder="John Doe">
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-group">
+                <label for="contact-email">Email Address *</label>
+                <input type="email" id="contact-email" name="email" required placeholder="john@example.com">
+              </div>
+              <div class="form-group">
+                <label for="contact-tel">Phone Number</label>
+                <input type="tel" id="contact-tel" name="tel" placeholder="(555) 000-0000">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Subject *</label>
+              <input type="text" id="contact-subject" name="subject" required placeholder="Question about organic feed...">
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message *</label>
+              <textarea id="contact-message" name="message" required placeholder="Write your message details here..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Message</button>
+          </form>
+
+          <!-- Success Wrapper -->
+          <div class="form-success-wrapper">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <h3 style="margin-bottom: 0.5rem;">Message Received!</h3>
+            <p class="success-message" style="font-size: 0.95rem;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FARM LOCATION MAP -->
+    <section class="section section-bg" id="farm-location-map">
+      <div class="container">
+        <div class="section-header">
+          <h2>Find the Farm</h2>
+          <p>We are situated in the lush valley, just a 20-minute drive from the city center. Follow Route 42 East.</p>
+        </div>
+        
+        <div class="map-placeholder">
+          <!-- We embed a beautiful stylized openstreetmap iframe. -->
+          <iframe 
+            src="https://www.openstreetmap.org/export/embed.html?bbox=-84.5500%2C33.8500%2C-84.3500%2C34.0500&amp;layer=mapnik&amp;marker=33.9500%2C-84.4500" 
+            title="Feather & Yolk Farm Map Location"
+            aria-label="Feather and Yolk Farm Map Location Grid">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ ACCORDION -->
+    <section class="section" id="faqs-accordion">
+      <div class="container" style="max-width: 800px;">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Find quick answers regarding our animal policies, delivery parameters, and product handling.</p>
+        </div>
+
+        <div class="faq-accordion">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-question">Are your farm tours wheelchair and stroller accessible?</button>
+            <div class="faq-answer">
+              <p>Yes. Our main packing facility and washing stations are fully ramp-accessible. Pasture lanes are flat, hard-packed gravel suitable for heavy-duty strollers and wheelchairs, though some grass fields can be slightly soft depending on recent rainfall.</p>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">What is the difference between free-range and pasture-raised eggs?</button>
+            <div class="faq-answer">
+              <p>While "free-range" simply requires hens to have access to the outdoors, "pasture-raised" guarantees they live primarily outdoors in rotated pastures. At Feather & Yolk, our pasture-raised hens enjoy at least 108 sq. feet of rotating organic pasture space per bird, resulting in nutrient-dense orange yolks.</p>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">Do you offer home delivery or only commercial accounts?</button>
+            <div class="faq-answer">
+              <p>We support both! Local home delivery is available for residential neighborhoods within our delivery coverage map, with minimum orders starting at only two cartons. Commercial restaurant accounts receive dedicated cold logistics slots.</p>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">Are your meats fresh or frozen when delivered?</button>
+            <div class="faq-answer">
+              <p>Our raw poultry cuts and whole chickens are processed daily, vacuum-sealed, and delivered chilled (never frozen) to commercial kitchens to guarantee peak culinary quality. Residential orders are also delivered chilled unless frozen storage is explicitly requested.</p>
             </div>
           </div>
         </div>
       </div>
-      
-      <!-- Google Maps Embed -->
-      <div class="map-container anim-fade-up">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.4284457788487!2d-73.98772392437648!3d40.751079365116744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689234567890!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- FAQ -->
-  <section class="section" style="background: var(--surface-color);">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-      </div>
-      <div style="max-width: 800px; margin: 40px auto 0;" class="anim-fade-up">
-        <div class="faq-item">
-          <h4>What is the minimum age for treks? <i class="fas fa-chevron-down"></i></h4>
-          <p>Most of our beginner treks have a minimum age of 12. Advanced treks require participants to be at least 18 years old.</p>
+    <!-- FARM GATE SHOP STAND HOURS -->
+    <section class="section section-bg" id="farm-gate-store">
+      <div class="container">
+        <div class="section-header">
+          <h2>Visit Our Farm Gate Store</h2>
+          <p>Locals are welcome to purchase fresh pasture products directly at our dispatch stand. Stop by during store hours:</p>
         </div>
-        <div class="faq-item">
-          <h4>Do you provide trekking gear? <i class="fas fa-chevron-down"></i></h4>
-          <p>Yes, we provide essential safety gear. Personal items like boots and clothing can be rented for an additional fee.</p>
-        </div>
-        <div class="faq-item">
-          <h4>What happens in case of bad weather? <i class="fas fa-chevron-down"></i></h4>
-          <p>Safety is our priority. If weather conditions are dangerous, we will reschedule or offer a full refund.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Travel Tips Section -->
-  <section class="section" style="background: var(--surface-color);">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Stay Connected</h2>
-        <p class="section-subtitle">How we ensure communication and safety in off-grid locations.</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-        <div class="premium-card anim-zoom-in">
-          <div class="card-content">
-            <i class="fas fa-satellite" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>Satellite Phones</h3>
-            <p style="color: var(--text-light);">Every guide carries satellite comms for instant emergency dispatch.</p>
+        <div class="grid-3">
+          <div class="promise-card">
+            <h4>Opening Hours</h4>
+            <p style="margin-bottom: 0.5rem; font-weight: 600;">Mon - Sat: 9:00 AM - 6:00 PM</p>
+            <p>Sunday: Closed for flock rest and pasture sanitization sweeps.</p>
           </div>
-        </div>
-        <div class="premium-card anim-zoom-in" style="transition-delay: 0.2s;">
-          <div class="card-content">
-            <i class="fas fa-map-marked-alt" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>Live GPS Tracking</h3>
-            <p style="color: var(--text-light);">Allow your family back home to track your daily progress online.</p>
+          <div class="promise-card">
+            <h4>Farm Gate Offerings</h4>
+            <p>Fresh pasture eggs, duck eggs, local wildflower honey combs, organic chicken cuts, and seasonal farm eggs.</p>
           </div>
-        </div>
-        <div class="premium-card anim-zoom-in" style="transition-delay: 0.4s;">
-          <div class="card-content">
-            <i class="fas fa-first-aid" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 15px;"></i>
-            <h3>24/7 Basecamp</h3>
-            <p style="color: var(--text-light);">Our central operations team monitors weather and logistics round the clock.</p>
+          <div class="promise-card">
+            <h4>Zero-Waste Policy</h4>
+            <p>Bring back your clean, used egg cartons for post-consumer recycling credits and discounts.</p>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Latest Blog Section -->
-  <section class="section">
-    <div class="container">
-      <div class="text-center anim-fade-up">
-        <h2 class="section-title">Latest Adventure News</h2>
-      </div>
-      <div class="blog-grid">
-        <div class="blog-card anim-fade-right">
-          <img src="images/blog/connected.jpg" alt="Blog post thumbnail">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">December 02, 2026</span>
-          <h3 style="margin: 10px 0;">How We Coordinate Large Group Tours</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">Planning a corporate retreat? Here is how our team seamlessly manages logistics for large groups.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+    <!-- RESTAURANT EMERGENCY HOTLINE -->
+    <section class="section" id="kitchen-hotline">
+      <div class="container grid-2" style="align-items: center;">
+        <div class="hero-image-container">
+          <img src="assets/cold_chain.png" alt="Dispatch truck ready for urgent delivery" style="border-radius: var(--border-radius-lg); width: 100%;">
         </div>
-        <div class="blog-card anim-fade-left">
-          <img src="images/blog/emergency.jpg" alt="Blog post thumbnail">
-          <span style="color: var(--accent-color); font-weight: 600; font-size: 0.9rem;">November 18, 2026</span>
-          <h3 style="margin: 10px 0;">24/7 Support on the Mountain: How It Works</h3>
-          <p style="color: var(--text-light); margin-bottom: 15px;">Learn about the satellite technology and response protocols that keep you connected and safe.</p>
-          <a href="#" style="color: var(--primary-color); font-weight: 600;">Read More <i class="fas fa-arrow-right"></i></a>
+        <div class="hero-content">
+          <h2>B2B Emergency Dispatch</h2>
+          <p style="margin-bottom: 1.5rem; font-size: 1.05rem;">Are you a chef facing an unexpected weekend cover spike? We provide quick emergency dispatches for culinary partners:</p>
+          <ul class="text-start" style="list-style: none; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">✓</span>
+              <div>
+                <strong>Chef Priority Hotline:</strong> Call or text our dispatcher at +1 (555) EGG-EGGS (Extension 9) for prompt B2B service.
+              </div>
+            </li>
+            <li style="display: flex; gap: 0.75rem; align-items: flex-start;">
+              <span style="color: var(--primary); font-size: 1.25rem;">✓</span>
+              <div>
+                <strong>Express Courier Routing:</strong> Same-day dispatch available within a 30-mile radius for standing kitchen accounts.
+              </div>
+            </li>
+          </ul>
+          <span style="font-weight: 600; color: var(--accent-brown);">Hotline hours: daily 6:00 AM - 8:00 PM.</span>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
+  <!-- FOOTER -->
+  <footer>
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <a href="index.html" class="logo" style="margin-bottom: 20px; display: inline-flex;"><img src="images/favicon.svg" alt="TrekX Logo" class="brand-icon">Trek<span>X</span></a>
-          <p>We are the leading premium trekking and hiking tour company, dedicated to providing safe, thrilling, and luxurious outdoor adventures worldwide.</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" style="display: flex; align-items: center; gap: 10px; margin-bottom: 1rem; text-decoration: none; color: var(--primary);">
+            <img src="assets/brand_logo.png" alt="Feather & Yolk Farm Logo" style="height: 40px; width: auto; object-fit: contain;">
+            <h3 style="margin: 0;">Feather & Yolk Farm</h3>
+          </a>
+          <p>Bringing nature's finest pasture eggs and sustainable poultry from our fields directly to your table. Healthy, ethical, and delicious.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01"/></svg>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
           </div>
         </div>
-        
-        <div class="footer-col">
-          <h4>Quick Links</h4>
+        <div class="footer-links-col">
+          <h4>Farm Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home2.html">Wholesale Hub</a></li>
+            <li><a href="products.html">Our Products</a></li>
+            <li><a href="tours.html">Book a Tour</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-col">
+          <h4>Company</h4>
           <ul class="footer-links">
             <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Our Services</a></li>
-            <li><a href="packages.html">Trek Packages</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="quality.html">Quality Standards</a></li>
+            <li><a href="contact.html">Support & FAQ</a></li>
+            <li><a href="bulk.html">Partnership Program</a></li>
           </ul>
         </div>
-        
-        <div class="footer-col">
-          <h4>Adventures</h4>
-          <ul class="footer-links">
-            <li><a href="#">Mountain Trekking</a></li>
-            <li><a href="#">Forest Trails</a></li>
-            <li><a href="#">Snow Expeditions</a></li>
-            <li><a href="#">Camping</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-col">
-          <h4>Contact Info</h4>
-          <ul class="footer-links">
-            <li><i class="fas fa-map-marker-alt"></i> 123 Adventure Ave, NY 10001</li>
-            <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
-            <li><i class="fas fa-envelope"></i> info@trekX.com</li>
-          </ul>
+        <div class="footer-contact-col">
+          <h4>Contact the Coop</h4>
+          <div class="footer-contact-info">
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+1 (555) 374-3447 (EGG-EGGS)</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>fresh@featherandyolkfarm.local</span>
+            </div>
+            <div class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>4200 Pasture Lane, Farmville, FV 84321</span>
+            </div>
+          </div>
         </div>
       </div>
-      
-      <div class="bottom-footer">
-        <p>&copy; 2026 Trekking & Hiking Tour Company. All Rights Reserved.</p>
-        <div class="bottom-links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-        </div>
+      <div class="footer-bottom">
+        <span>© 2026 Feather & Yolk Farm. All Rights Reserved. Coops Certified Organic.</span>
+        <span>Designed with 💚 for Sustainable Agriculture</span>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="js/animations.js"></script>
 </body>
 </html>
